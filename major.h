@@ -1,0 +1,4 @@
+enum Major {
+  CS,
+  PoliSci
+};
