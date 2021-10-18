@@ -10,7 +10,7 @@ CXX         = g++
 
 # list of sources used in project
 SOURCES1    = $(wildcard *.cpp)
-SOURCES2    = $(wildcard appearance/*.cpp)
+SOURCES2    = $(wildcard /appearance/*.cpp)
 SOURCES     = $(SOURCES1) $(SOURCES2)
 # list of objects used in project
 SOURCES3    = $(SOURCES2:appearance/%=%)

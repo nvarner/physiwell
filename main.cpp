@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 #include <getopt.h>
 #include <istream>
 #include <string>
@@ -14,6 +15,24 @@
 //     std::string name;
 //     in >> name;
 // }
+
+// Whenever the player needs to make a multiple choice, use this function.
+// parameter is a string that is a list of all potential choices.
+// E.g. "ABC" for 3 choices - A, B, or C
+// Returns the character they chose.
+char choose(std::string choices, std::string err = "Incorrect Input. Try Again."){
+  char choice;
+  while (true){
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.clear();
+    std::cin >> choice;
+    if (choices.find(choice) != std::string::npos) break;
+    else std::cout << err << std::endl;
+  }
+  std::cout << "You selected: " << choice << std::endl;
+  return choice;
+}
 
 int main(int argc, char** argv){
   int option_index = 0, option = 0;
@@ -35,6 +54,15 @@ int main(int argc, char** argv){
         exit(0);
     }
   }
-
+  std::string buffer;
+  // Testing
+  std::cout << "Test Start" << std::endl;
+  std::cout << "Something " << std::endl;
+  std::cin >> buffer;
+  std::cout << buffer << std::endl;
+  char c = choose("ABCDE");
+  std::cout << "Chose: " << c << std::endl;
+  c = choose("ABCDE");
+  std::cout << "Chose: " << c << std::endl;
   return 0; 
 }
