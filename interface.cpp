@@ -1,42 +1,27 @@
 #include "interface.h"
+
+#include <cassert>
+#include <cctype>
+#include <chrono>
+#include <cstddef>
 #include <cstdint>
 #include <istream>
 #include <ostream>
 #include <string>
+#include <thread>
 #include <vector>
-#include <cassert>
 
-Interface::Interface(std::istream &in_, std::ostream &out_)
-    : in(in_), out(out_) {}
-
-void Interface::print(const std::string &to_print, const AnsiCode &ansi) const {
-    this->out << ansi << to_print << AnsiCode::CLEAR;
-}
-
-std::string Interface::prompt(const std::string &prompt) const {
-  this->print(prompt, AnsiCode(FontWeight::Bold, false, false));
-  this->print("\n> ", AnsiCode(FontWeight::Normal, false, true));
-
-  std::string response;
-
-  this->out << AnsiCode(FontWeight::Normal, true, false);
-  this->in >> response;
-  this->out << AnsiCode::CLEAR;
-
-  return response;
-}
-
-uint8_t font_weight_code(const FontWeight & font_weight) {
-    switch (font_weight) {
-        case FontWeight::Bold:
-            return 1;
-        case FontWeight::Light:
-            return 2;
-        case FontWeight::Normal:
-            return 0;
-    }
-    assert(false);
-    return -1;
+uint8_t font_weight_code(const FontWeight &font_weight) {
+  switch (font_weight) {
+  case FontWeight::Bold:
+    return 1;
+  case FontWeight::Light:
+    return 2;
+  case FontWeight::Normal:
+    return 0;
+  }
+  assert(false);
+  return -1;
 }
 
 AnsiCode::AnsiCode(const FontWeight font_weight_, const bool emphasized_,
@@ -46,40 +31,105 @@ AnsiCode::AnsiCode(const FontWeight font_weight_, const bool emphasized_,
       foreground(foreground_), background(background_) {}
 
 std::string AnsiCode::as_ascii() const {
-    std::vector<uint8_t> args;
+  std::vector<uint8_t> args;
 
-    uint8_t font_weight_arg = font_weight_code(this->font_weight);
-    if (font_weight_arg != 0) {
-        args.push_back(font_weight_arg);
-    }
+  uint8_t font_weight_arg = font_weight_code(this->font_weight);
+  if (font_weight_arg != 0) {
+    args.push_back(font_weight_arg);
+  }
 
-    if (this->emphasized) {
-        args.push_back(4);
-    }
+  if (this->emphasized) {
+    args.push_back(4);
+  }
 
-    if (this->blinking) {
-        args.push_back(5);
-    }
+  if (this->blinking) {
+    args.push_back(5);
+  }
 
-    if (this->foreground != Color::Default) {
-      args.push_back(this->foreground + 30);
-    }
-    if (this->background != Color::Default) {
-      args.push_back(this->background + 40);
-    }
+  if (this->foreground != Color::Default) {
+    args.push_back(this->foreground + 30);
+  }
+  if (this->background != Color::Default) {
+    args.push_back(this->background + 40);
+  }
 
-    std::string ascii = "\x1b[0";
-    for (size_t i = 0; i < args.size(); i++) {
-        ascii += ";" + std::to_string(args[i]);
-    }
-    ascii += "m";
+  std::string ascii = "\x1b[0";
+  for (size_t i = 0; i < args.size(); i++) {
+    ascii += ";" + std::to_string(args[i]);
+  }
+  ascii += "m";
 
-
-    return ascii;
+  return ascii;
 }
 
-const AnsiCode AnsiCode::CLEAR = AnsiCode(FontWeight::Normal, false, false, Color::White, Color::Black);
+const AnsiCode AnsiCode::CLEAR = AnsiCode(FontWeight::Normal, false, false);
 
-std::ostream & operator<<(std::ostream & out, const AnsiCode & code) {
-    return out << code.as_ascii();
+std::ostream &operator<<(std::ostream &out, const AnsiCode &code) {
+  return out << code.as_ascii();
+}
+
+Interface::Interface(std::istream &in_, std::ostream &out_)
+    : in(in_), out(out_) {}
+
+void Interface::print(const std::string &to_print, const AnsiCode &ansi, int64_t delay) const {
+  this->print_ansi(ansi);
+  for (size_t i = 0; i < to_print.size(); i++) {
+    this->print_char(to_print[i], delay);
+  }
+  this->print_ansi(AnsiCode::CLEAR);
+}
+
+void Interface::print_char(const char to_print, int64_t delay) const {
+  this->out << to_print;
+  this->out.flush();
+  std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+}
+
+void Interface::print_ansi(const AnsiCode &ansi) const {
+  this->out << ansi;
+}
+
+std::string Interface::input() const {
+  std::string response;
+  this->out << AnsiCode(FontWeight::Normal, true, false);
+  this->in >> response;
+  this->out << AnsiCode::CLEAR;
+  return response;
+}
+
+std::string Interface::prompt(const std::string &prompt) const {
+  this->print(prompt, AnsiCode(FontWeight::Bold, false, false));
+  this->print("\n> ", AnsiCode(FontWeight::Normal, false, true));
+  std::string result = this->input();
+  this->print("\n", AnsiCode::CLEAR);
+  return result;
+}
+
+bool is_numeric(const std::string &str) {
+  for (size_t i = 0; i < str.size(); i++) {
+    if (!std::isdigit(str[i])) {
+      return false;
+    }
+  }
+  return true;
+}
+
+size_t Interface::menu(const std::string &description,
+                       const std::vector<std::string> &options) const {
+  while (true) {
+    this->print(description + "\n", AnsiCode(FontWeight::Bold, false, false));
+    for (size_t i = 0; i < options.size(); i++) {
+      this->print(std::to_string(i + 1) + ". " + options[i] + "\n",
+                  AnsiCode::CLEAR);
+    }
+    std::string response = this->prompt("Choose an option.");
+    if (is_numeric(response)) {
+      size_t choice = std::stoi(response);
+      if (choice > 0 && choice <= options.size()) {
+        return choice - 1;
+      }
+    }
+    this->print("There is no option " + response + ".\n",
+                AnsiCode(FontWeight::Normal, false, false, Color::Red));
+  }
 }

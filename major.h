@@ -1,4 +1,5 @@
 enum Major {
   CS,
-  PoliSci
+  PoliSci,
+  Undecided
 };

@@ -9,13 +9,8 @@ public:
   static const Gender FEMALE;
   static const Gender NB;
 
-  Gender(const std::string name, const std::string nom, const std::string acc,
-         const std::string reflex, const std::string ind_gen,
-         const std::string dep_gen);
-
-  // Get the name of the gender.
-  // Eg. "male"
-  const std::string &get_name() const;
+  Gender(const std::string nom, const std::string acc, const std::string reflex,
+         const std::string ind_gen, const std::string dep_gen);
 
   // Get the nominative pronoun.
   // Eg. "he"
@@ -38,7 +33,6 @@ public:
   const std::string &get_dep_gen() const;
 
 private:
-  const std::string name;
   const std::string nom;     // he, she, they
   const std::string acc;     // him, her, them
   const std::string reflex;  // himself, herself, themselves

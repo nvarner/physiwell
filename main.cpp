@@ -1,11 +1,13 @@
 #include <iostream>
 #include <limits>
+#include <algorithm>
+#include <cassert>
 #include <getopt.h>
+#include <iostream>
 #include <istream>
+#include <queue>
 #include <string>
 #include <vector>
-#include <queue>
-#include <algorithm>
 
 #ifdef _WIN32
 #include <Windows.h>
@@ -16,12 +18,85 @@
 #include "interface.h"
 #include "player.h"
 
-// Player create_player(std::istream & in, std::ostream & out) {
-//     out << "What is your name?\n> ";
-    
-//     std::string name;
-//     in >> name;
-// }
+Gender prompt_pronouns(const Interface &interface) {
+  std::string nom = interface.prompt(
+      "What is your nominative pronoun (analogous to he or she)?");
+  std::string acc = interface.prompt("Accusative (like him or her)?");
+  std::string reflexive =
+      interface.prompt("Reflexive (like himself or herself)?");
+  std::string ind_gen = interface.prompt("Independent genitive (like hers)?");
+  std::string dep_gen = interface.prompt("Dependent genitive (like her)?");
+  return Gender(nom, acc, reflexive, ind_gen, dep_gen);
+}
+
+Gender create_gender(const Interface &interface) {
+  size_t choice =
+      interface.menu("What are your pronouns?",
+                     std::vector<std::string>{"he/him", "she/her", "they/them",
+                                              "Something else"});
+  switch (choice) {
+  case 0:
+    return Gender::MALE;
+  case 1:
+    return Gender::FEMALE;
+  case 2:
+    return Gender::NB;
+  default:
+    return prompt_pronouns(interface);
+  }
+}
+
+Hat create_hat(const Interface &interface) {
+  size_t choice = interface.menu("What is the height of your hat?",
+                                 std::vector<std::string>{"tall", "short"});
+  HatHeight height = choice == 0 ? HatHeight::Tall : HatHeight::Short;
+
+  std::string color = interface.prompt("What color is your hat?");
+
+  return Hat(height, color);
+}
+
+Appearance create_appearance(const Interface &interface) {
+  Gender gender = create_gender(interface);
+  Hat hat = create_hat(interface);
+  return Appearance(gender, hat);
+}
+
+Major create_major(const Interface &interface) {
+  size_t choice =
+      interface.menu("What is your major?",
+                     std::vector<std::string>{
+                         "Computer Science", "Political Science", "Undecided"});
+  switch (choice) {
+  case 0:
+    return Major::CS;
+  case 1:
+    return Major::PoliSci;
+  default:
+    return Major::Undecided;
+  }
+}
+
+bool ask_has_physiwell(const Interface &interface) {
+  interface.print(
+      "Congratulations! You have been selected as the winner of one PhysiWell "
+      "fitness tracker watch, or another product of lesser value!\n");
+  size_t choice = interface.menu(
+      "What would you like to choose?",
+      std::vector<std::string>{
+          "PhysiWell fitness tracker (allows you to see fitness data and "
+          "curent time)",
+          "Cheap analog watch (allows you to see the current time)"});
+  return choice == 0;
+}
+
+Player create_player(const Interface &interface) {
+  std::string name = interface.prompt("What is your name?");
+  Appearance appearance = create_appearance(interface);
+  Major major = create_major(interface);
+  bool has_physiwell = ask_has_physiwell(interface);
+  return Player(name, appearance, major, has_physiwell);
+}
 
 // Whenever the player needs to make a multiple choice, use this function.
 // parameter is a string that is a list of all potential choices.
@@ -45,7 +120,7 @@ char choose(std::string choices, std::string err = "Incorrect Input. Try Again."
   return choice[0];
 }
 
-int main(int argc, char** argv){
+int main(int argc, char **argv) {
   int option_index = 0, option = 0;
   struct option longOpts[] = {{"sleep", required_argument, nullptr, 's'}, // set sleep times between text prints. Default 1 second.
                               {"median", no_argument, nullptr, 'm'},
@@ -77,8 +152,7 @@ int main(int argc, char** argv){
   std::cout << "Chose: " << c << std::endl;
 
   Interface interface(std::cin, std::cout);
-  std::string favorite_color = interface.prompt("What is your favorite color?");
-  std::cout << "fav color is " << favorite_color << "\n";
+  Player player = create_player(interface);
 
-  return 0; 
+  return 0;
 }

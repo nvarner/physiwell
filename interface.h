@@ -1,8 +1,10 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
+#include <cstdint>
 #include <ostream>
 #include <string>
+#include <vector>
 
 enum FontWeight { Bold, Normal, Light };
 
@@ -43,15 +45,24 @@ public:
   Interface(std::istream &in, std::ostream &out);
 
   void print(const std::string &to_print,
-             const AnsiCode &ansi = AnsiCode::CLEAR) const;
+             const AnsiCode &ansi = AnsiCode::CLEAR, int64_t delay = 20) const;
 
-  // Prompt the user with a given prompt, then return their response. The
-  // response can take on any type the extraction operator `>>` supports.
+  std::string input() const;
+
+  // Prompt the user with a given prompt, then return their response.
   std::string prompt(const std::string &prompt) const;
+
+  // Prompt the user to choose an option from a menu, then return the index of
+  // the option they chose.
+  size_t menu(const std::string &description,
+              const std::vector<std::string> &options) const;
 
 private:
   std::istream &in;
   std::ostream &out;
+
+  void print_char(const char to_print, int64_t ms_delay = 20) const;
+  void print_ansi(const AnsiCode &ansi) const;
 };
 
 #endif
