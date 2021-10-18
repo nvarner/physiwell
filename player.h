@@ -1,3 +1,6 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+
 #include "appearance/appearance.h"
 #include "major.h"
 #include "wellness_levels.h"
@@ -22,3 +25,5 @@ private:
   Major major;
   const bool has_physiwell;
 };
+
+#endif

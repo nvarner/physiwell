@@ -13,6 +13,7 @@
 #include <unistd.h>
 #endif
 
+#include "interface.h"
 #include "player.h"
 
 // Player create_player(std::istream & in, std::ostream & out) {
@@ -74,5 +75,10 @@ int main(int argc, char** argv){
   std::cout << "Chose: " << c << std::endl;
   c = choose("ABCDE");
   std::cout << "Chose: " << c << std::endl;
+
+  Interface interface(std::cin, std::cout);
+  std::string favorite_color = interface.prompt("What is your favorite color?");
+  std::cout << "fav color is " << favorite_color << "\n";
+
   return 0; 
 }
