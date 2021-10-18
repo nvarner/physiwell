@@ -7,6 +7,12 @@
 #include <queue>
 #include <algorithm>
 
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
+
 #include "player.h"
 
 // Player create_player(std::istream & in, std::ostream & out) {
@@ -24,31 +30,31 @@
 // Can be improved? Only accept single chars, maybe.
 // Bug?: just be sure to ask for input once before using this function.
 char choose(std::string choices, std::string err = "Incorrect Input. Try Again."){
-  char choice;
+  std::string choice;
   while (true){
     std::cin.clear();
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::cin.clear();
     std::cin >> choice;
-    if (choices.find(choice) != std::string::npos) break;
+    if (choice == "QUIT") return '~'; // using this char for quits.
+    if (choices.find(choice[0]) != std::string::npos) break;
     else std::cout << err << std::endl;
   }
-  std::cout << "You selected: " << choice << std::endl;
-  return choice;
+  std::cout << "You selected: " << choice[0] << std::endl;
+  return choice[0];
 }
 
 int main(int argc, char** argv){
   int option_index = 0, option = 0;
-  struct option longOpts[] = {{"verbose", no_argument, nullptr, 'v'},
-                              {"statistics", required_argument, nullptr, 's'},
+  struct option longOpts[] = {{"sleep", required_argument, nullptr, 's'}, // set sleep times between text prints. Default 1 second.
                               {"median", no_argument, nullptr, 'm'},
                               {"help", no_argument, nullptr, 'h'},
                               { nullptr, 0, nullptr, '\0' }};
+  int slp = 1;
   while ((option = getopt_long(argc, argv, "vs:mh", longOpts, &option_index)) != -1) {
     switch (option) {
-      case 'v':
-        break;
       case 's':
+        slp = std::atoi(optarg);
         break;
       case 'm':
         break;
@@ -59,6 +65,7 @@ int main(int argc, char** argv){
   }
   std::string buffer;
   // Testing
+  sleep(slp);
   std::cout << "Test Start" << std::endl;
   std::cout << "Something " << std::endl;
   std::cin >> buffer;
