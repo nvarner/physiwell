@@ -71,28 +71,33 @@ std::ostream &operator<<(std::ostream &out, const AnsiCode &code) {
 Interface::Interface(std::istream &in_, std::ostream &out_)
     : in(in_), out(out_) {}
 
-void Interface::print(const std::string &to_print, const AnsiCode &ansi, int64_t delay) const {
+void sleep(const int64_t delay) {
+  std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+}
+
+void Interface::print(const std::string &to_print, const AnsiCode &ansi,
+                      const int64_t delay, const int64_t post_delay) const {
   this->print_ansi(ansi);
   for (size_t i = 0; i < to_print.size(); i++) {
     this->print_char(to_print[i], delay);
   }
   this->print_ansi(AnsiCode::CLEAR);
+  sleep(post_delay);
 }
 
 void Interface::print_char(const char to_print, int64_t delay) const {
   this->out << to_print;
   this->out.flush();
-  std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+  sleep(delay);
 }
 
-void Interface::print_ansi(const AnsiCode &ansi) const {
-  this->out << ansi;
-}
+void Interface::print_ansi(const AnsiCode &ansi) const { this->out << ansi; }
 
 std::string Interface::input() const {
+  this->in.clear();
   std::string response;
   this->out << AnsiCode(FontWeight::Normal, true, false);
-  this->in >> response;
+  std::getline(this->in, response);
   this->out << AnsiCode::CLEAR;
   return response;
 }
