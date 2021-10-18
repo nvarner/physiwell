@@ -67,6 +67,9 @@ clean:
 	rm -f $(OBJECTS) $(EXECUTABLE) $(EXECUTABLE)_debug $(EXECUTABLE)_profile
 	rm -Rf *.dSYM
 
+itwork: $(SOURCES)
+	$(CXX) $(CXXFLAGS) $(SOURCES) -o $(EXECUTABLE)
+
 # these targets do not create any files
 .PHONY: all release debug profile gprof static clean alltests
 
