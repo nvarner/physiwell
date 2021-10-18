@@ -20,6 +20,9 @@
 // parameter is a string that is a list of all potential choices.
 // E.g. "ABC" for 3 choices - A, B, or C
 // Returns the character they chose.
+
+// Can be improved? Only accept single chars, maybe.
+// Bug?: just be sure to ask for input once before using this function.
 char choose(std::string choices, std::string err = "Incorrect Input. Try Again."){
   char choice;
   while (true){
