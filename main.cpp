@@ -1,19 +1,14 @@
-#include <iostream>
-#include <limits>
 #include <algorithm>
 #include <cassert>
+#include <chrono>
 #include <getopt.h>
 #include <iostream>
 #include <istream>
+#include <limits>
 #include <queue>
 #include <string>
+#include <thread>
 #include <vector>
-
-#ifdef _WIN32
-#include <Windows.h>
-#else
-#include <unistd.h>
-#endif
 
 #include "interface.h"
 #include "player.h"
@@ -100,23 +95,27 @@ Player create_player(const Interface &interface) {
 
 int main(int argc, char **argv) {
   int option_index = 0, option = 0;
-  struct option longOpts[] = {{"sleep", required_argument, nullptr, 's'}, // set sleep times between text prints. Default 1 second.
-                              {"median", no_argument, nullptr, 'm'},
-                              {"help", no_argument, nullptr, 'h'},
-                              { nullptr, 0, nullptr, '\0' }};
+  struct option longOpts[] = {
+      {"sleep", required_argument, nullptr,
+       's'}, // set sleep times between text prints. Default 1 second.
+      {"median", no_argument, nullptr, 'm'},
+      {"help", no_argument, nullptr, 'h'},
+      {nullptr, 0, nullptr, '\0'}};
   int slp = 1;
-  while ((option = getopt_long(argc, argv, "vs:mh", longOpts, &option_index)) != -1) {
+  while ((option = getopt_long(argc, argv, "vs:mh", longOpts, &option_index)) !=
+         -1) {
     switch (option) {
-      case 's':
-        slp = std::atoi(optarg);
-        break;
-      case 'm':
-        break;
-      case 'h':
-        std::cout << "Help Message\n";
-        exit(0);
+    case 's':
+      slp = std::atoi(optarg);
+      break;
+    case 'm':
+      break;
+    case 'h':
+      std::cout << "Help Message\n";
+      exit(0);
     }
   }
+  std::this_thread::sleep_for(std::chrono::milliseconds(slp));
 
   Interface interface(std::cin, std::cout);
   Player player = create_player(interface);

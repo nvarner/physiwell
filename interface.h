@@ -8,7 +8,7 @@
 
 enum FontWeight { Bold, Normal, Light };
 
-enum Color {
+enum Color: uint8_t {
   Black = 0,
   Red = 1,
   Green = 2,
