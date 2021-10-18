@@ -1,4 +1,4 @@
-## Makefile
+## Makefile adapted from EECS 281
 
 # Change 'executable' to match the command name given in the project spec.
 EXECUTABLE  = physiwell
