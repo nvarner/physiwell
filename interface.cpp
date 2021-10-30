@@ -9,6 +9,7 @@
 #include <ostream>
 #include <string>
 #include <thread>
+#include <utility>
 #include <vector>
 
 uint8_t font_weight_code(const FontWeight &font_weight) {
@@ -110,31 +111,4 @@ std::string Interface::prompt(const std::string &prompt) const {
   return result;
 }
 
-bool is_numeric(const std::string &str) {
-  for (size_t i = 0; i < str.size(); i++) {
-    if (!std::isdigit(str[i])) {
-      return false;
-    }
-  }
-  return true;
-}
 
-size_t Interface::menu(const std::string &description,
-                       const std::vector<std::string> &options) const {
-  while (true) {
-    this->print(description + "\n", AnsiCode(FontWeight::Bold, false, false));
-    for (size_t i = 0; i < options.size(); i++) {
-      this->print(std::to_string(i + 1) + ". " + options[i] + "\n",
-                  AnsiCode::CLEAR);
-    }
-    std::string response = this->prompt("Choose an option.");
-    if (is_numeric(response)) {
-      size_t choice = std::stoi(response);
-      if (choice > 0 && choice <= options.size()) {
-        return choice - 1;
-      }
-    }
-    this->print("There is no option " + response + ".\n",
-                AnsiCode(FontWeight::Normal, false, false, Color::Red));
-  }
-}
