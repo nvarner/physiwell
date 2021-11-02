@@ -4,7 +4,11 @@
 #include <cstdint>
 #include <ostream>
 #include <string>
+#include <utility>
 #include <vector>
+#include <functional>
+
+#include "util.h"
 
 enum FontWeight { Bold, Normal, Light };
 
@@ -55,8 +59,26 @@ public:
 
   // Prompt the user to choose an option from a menu, then return the index of
   // the option they chose.
-  size_t menu(const std::string &description,
-              const std::vector<std::string> &options) const;
+  template <typename T>
+  T menu(const std::string &description,
+                       const std::vector<std::pair<std::string, std::function<T(const Interface&)>>> &options) const {
+  while (true) {
+    this->print(description + "\n", AnsiCode(FontWeight::Bold, false, false));
+    for (size_t i = 0; i < options.size(); i++) {
+      this->print(std::to_string(i + 1) + ". " + options[i].first + "\n",
+                  AnsiCode::CLEAR);
+    }
+    std::string response = this->prompt("Choose an option.");
+    if (is_numeric(response)) {
+      size_t choice = std::stoi(response);
+      if (choice > 0 && choice <= options.size()) {
+        return options[choice - 1].second(*this);
+      }
+    }
+    this->print("There is no option " + response + ".\n",
+                AnsiCode(FontWeight::Normal, false, false, Color::Red));
+  }
+}
 
 private:
   std::istream &in;

@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <cassert>
 #include <chrono>
+#include <functional>
 #include <getopt.h>
 #include <iostream>
 #include <istream>
@@ -8,10 +9,19 @@
 #include <queue>
 #include <string>
 #include <thread>
+#include <utility>
 #include <vector>
 
 #include "interface.h"
 #include "player.h"
+
+#define MENU(interface, return_type, query, ...) interface.menu( \
+  query, \
+  std::vector<std::pair<std::string, std::function<return_type(const Interface&)>>>{ \
+    __VA_ARGS__ \
+  })
+
+#define MENU_OPTION(text, return_expression) {text, []([[maybe_unused]] const Interface &interface) { return return_expression; }}
 
 Gender prompt_pronouns(const Interface &interface) {
   std::string nom = interface.prompt(
@@ -25,26 +35,19 @@ Gender prompt_pronouns(const Interface &interface) {
 }
 
 Gender create_gender(const Interface &interface) {
-  size_t choice =
-      interface.menu("What are your pronouns?",
-                     std::vector<std::string>{"he/him", "she/her", "they/them",
-                                              "Something else"});
-  switch (choice) {
-  case 0:
-    return Gender::MALE;
-  case 1:
-    return Gender::FEMALE;
-  case 2:
-    return Gender::NB;
-  default:
-    return prompt_pronouns(interface);
-  }
+  return MENU(interface, Gender, "What are your pronouns?",
+          MENU_OPTION("he/him", Gender::MALE),
+          MENU_OPTION("she/her", Gender::FEMALE),
+          MENU_OPTION("they/them", Gender::NB),
+          MENU_OPTION("Something else", prompt_pronouns(interface))
+      );
 }
 
 Hat create_hat(const Interface &interface) {
-  size_t choice = interface.menu("What is the height of your hat?",
-                                 std::vector<std::string>{"tall", "short"});
-  HatHeight height = choice == 0 ? HatHeight::Tall : HatHeight::Short;
+  HatHeight height = MENU(interface, HatHeight, "What is the height of your hat?",
+    MENU_OPTION("tall", HatHeight::Tall),
+    MENU_OPTION("short", HatHeight::Short)
+  );
 
   std::string color = interface.prompt("What color is your hat?");
 
@@ -58,31 +61,21 @@ Appearance create_appearance(const Interface &interface) {
 }
 
 Major create_major(const Interface &interface) {
-  size_t choice =
-      interface.menu("What is your major?",
-                     std::vector<std::string>{
-                         "Computer Science", "Political Science", "Undecided"});
-  switch (choice) {
-  case 0:
-    return Major::CS;
-  case 1:
-    return Major::PoliSci;
-  default:
-    return Major::Undecided;
-  }
+  return MENU(interface, Major, "What is your major?",
+    MENU_OPTION("Computer Science", Major::CS),
+    MENU_OPTION("Political Science", Major::PoliSci),
+    MENU_OPTION("Undecided", Major::Undecided)
+  );
 }
 
 bool ask_has_physiwell(const Interface &interface) {
   interface.print(
       "Congratulations! You have been selected as the winner of one PhysiWell "
       "fitness tracker watch, or another product of lesser value!\n");
-  size_t choice = interface.menu(
-      "What would you like to choose?",
-      std::vector<std::string>{
-          "PhysiWell fitness tracker (allows you to see fitness data and "
-          "curent time)",
-          "Cheap analog watch (allows you to see the current time)"});
-  return choice == 0;
+  return MENU(interface, bool, "What would you like to choose?",
+    MENU_OPTION("PhysiWell fitness tracker (allows you to see fitness data and current time)", true),
+    MENU_OPTION("Cheap analog watch (allows you to see the current time)", false)
+  );
 }
 
 Player create_player(const Interface &interface) {
