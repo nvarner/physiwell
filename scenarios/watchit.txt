@@ -1,0 +1,27 @@
+Watch or Watchit
+~t 0
+"I check on your height,
+Your weight, and fitness.
+I’ll keep your secrets;
+Why, I'd never tell!
+I know what is best
+And advise you right,
+With big insights from
+Your own personnel.
+I urge you to bed,
+and wish you good night,
+When tomorrow comes,
+I’ll say you slept well.
+Who am I?"
+...
+The Physiwell Watchit!
+...
+The Physiwell Watchit will track your physique and give recommendations for your weekly fitness.
+Will you take the Physiwell Watchit? 
+~c
+1 Replace your watch for the Physiwell Watchit.|You take the Physiwell Watchit.
+2 Keep your current watch. It can tell time just fine.|You reject the Physiwell Watchit.
+~t 1
+[Can't think of what to write here, rn]
+~t 2
+[Can't think of what to write here, rn]

@@ -1,0 +1,18 @@
+Notes and Compendium
+
+Scenarios' first line is always a title.
+Only need to read through the file once
+Sleep after printing each line.
+~[char] denotes delimiter. Read next text differently for each delimiter
+~t [int] - text: print each line. ~t will have a number after; this is for mappying choices to text blocks.
+            Always read the text block if the argument is 0.
+~w [int] - watchit text: same as ~t, but only print if the player has the Physiwell Watchit.
+~p - prerequisites (can appear only right after title):
+~c - choices: Number, text, text. Text are separated by the | character.
+                Only print choices for which the requirements are met. Number choices printed from 1 to n.
+                The number maps to later text block. If the number is 0, it means the next text block.
+                First text is the choice description.
+                Second text is the choice confirmation, printed if chosen.
+
+Scenario Compendium:
+watchit (guaranteed): Select either a normal watch or the Physiwell Watchit
