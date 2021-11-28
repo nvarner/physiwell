@@ -14,14 +14,7 @@
 
 #include "interface.h"
 #include "player.h"
-
-#define MENU(interface, return_type, query, ...) interface.menu( \
-  query, \
-  std::vector<std::pair<std::string, std::function<return_type(const Interface&)>>>{ \
-    __VA_ARGS__ \
-  })
-
-#define MENU_OPTION(text, return_expression) {text, []([[maybe_unused]] const Interface &interface) { return return_expression; }}
+#include "scenario.h"
 
 Gender prompt_pronouns(const Interface &interface) {
   std::string nom = interface.prompt(
@@ -112,6 +105,10 @@ int main(int argc, char **argv) {
 
   Interface interface(std::cin, std::cout);
   Player player = create_player(interface);
+
+  Scenario scenario("scenarios/lunch_study_walk.txt");
+
+  scenario.play(player, interface);
 
   return 0;
 }

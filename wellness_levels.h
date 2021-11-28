@@ -2,13 +2,14 @@
 
 class WellnessLevels {
 public:
-  WellnessLevels() : physical(0), mental(0), social(0), stress(0), grades(0) {}
+  WellnessLevels() : steps(0), strength(0), stress(0), relations(0), school(0), confidence(0) {}
 
-  uint32_t physical;
-  uint32_t mental;
-  uint32_t social;
-  uint32_t stress;
-  uint32_t grades;
+  int steps;
+  int strength;
+  int stress;
+  int relations;
+  int school;
+  int confidence;
 
 private:
 };

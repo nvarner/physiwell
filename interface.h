@@ -10,6 +10,14 @@
 
 #include "util.h"
 
+#define MENU(interface, return_type, query, ...) interface.menu( \
+  query, \
+  std::vector<std::pair<std::string, std::function<return_type(const Interface&)>>>{ \
+    __VA_ARGS__ \
+  })
+
+#define MENU_OPTION(text, return_expression) {text, [&]([[maybe_unused]] const Interface &interface) { return return_expression; }}
+
 enum FontWeight { Bold, Normal, Light };
 
 enum Color: uint8_t {
@@ -49,7 +57,7 @@ public:
   Interface(std::istream &in, std::ostream &out);
 
   void print(const std::string &to_print,
-             const AnsiCode &ansi = AnsiCode::CLEAR, const int64_t delay = 20,
+             const AnsiCode &ansi = AnsiCode::CLEAR, const int64_t delay = 10,
              const int64_t post_delay = 100) const;
 
   std::string input() const;
@@ -84,7 +92,7 @@ private:
   std::istream &in;
   std::ostream &out;
 
-  void print_char(const char to_print, int64_t ms_delay = 20) const;
+  void print_char(const char to_print, int64_t ms_delay = 10) const;
   void print_ansi(const AnsiCode &ansi) const;
 };
 
