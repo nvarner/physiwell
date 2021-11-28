@@ -7,9 +7,12 @@ scenarios.txt file notes:
 Scenarios' first line is always a title.
 Only need to read through the file once
 Sleep after printing each line.
+
 ~[char] denotes delimiter. Read next text differently for each delimiter
+
 ~t [int] - text: print each line. ~t will have a number after; this is for mappying choices to text blocks.
             Always read the text block if the argument is 0.
+
 ~w [int] - watchit text: same as ~t, but only print if the player has the Physiwell Watchit.
 
 ~c - choices: Number, text, text. Text are separated by the | character.
@@ -17,6 +20,8 @@ Sleep after printing each line.
                 The number maps to later text block.
                 First text is the choice description.
                 Second text is the choice confirmation, printed if chosen.
+    Keep track of all numbers from choices, and perform all commands with those numbers.
+
 ~a [int] [aspect] +|-[int] - If the user ever selected the given number, increase or decrease the specified aspect by
                                 the specified amount.
 
@@ -28,21 +33,31 @@ relations: how strong your relationships with others are (higher is stronger rel
 school: how well prepared you are for classes (higher is more prepared)
 confidence: how self-confident/strong your self esteem is (higher is more self-confident)
 
-    Keep track of all numbers from choices, and perform all commands with those numbers.
-Scenario Compendium:
-birthday: it's a friend's birthday! Will you go celebrate with them?
-called_out: your professor calls you out, but you do not know the answer
-feed_squirrels: will you feed the squirrels?
-final_study: Finals are coming up. How will you prepare?
-gym: a friend invites you to go the gym
-group_project1: a class assigns a group project
-group_project2: (requires completion of group_project1) a member of your group is not doing their share of work
-group_project3: (requires completion of group_project1) a member of your group is not prepared for the upcoming presentation
-interview: prepare for an upcoming interview
-midterm_study: Midterms are coming up. How will you prepare?
-night_party: you've been invited to a party past midnight by your friends
-pop_quiz: you have to take a sudden quiz that you were not prepared for
-sport_tryout: tryouts for the university's sports teams
-study: you need to study for an upcoming exam, but your friends have other plans
-watchit: Select either a normal watch or the Physiwell Watchit
-work_overload: too much work, and too little time to do it all
+Scenario Compendium: (marked with * if not yet written)
+*argument (6): (5 different scenarios) you've gotten into an argument with your friend.
+*birthday (5): it's a friend's birthday! Will you go celebrate with them?
+*called_out (9): your professor calls you out, but you are not certain of the answer
+*day_off (4): no classes, no work. What will you do?
+*drugs (1): your friend offers you illicit drugs
+feed_raccoons (6): will you feed the raccoons?
+feed_squirrels (10): will you feed the squirrels?
+*fight (2): you witness a couple of students are getting into a fight
+*final_study (special): Finals are coming up. How will you prepare?
+*funny_hat_convention (1): (only happens once) title
+*gym (7): a friend invites you to go the gym
+*group_project1 (4): a class assigns a group project
+*group_project2 (5): (requires completion of group_project1) a member of your group is not doing their share of work
+*group_project3 (4): (requires completion of group_project1) a member of your group is not prepared for the upcoming presentation
+*interview (4): prepare for an upcoming interview
+*lost_keys (3): you've lost your housing keys!
+*midterm_study (special): Midterms are coming up. How will you prepare?
+*muggers (1): a terrifying encounter with muggers at night
+*nice_day (7): it's a beautiful day outside.
+*night_party (6): you've been invited to a party past midnight by your friends
+*pop_quiz (6): you have to take a sudden quiz that you were not prepared for
+*schedule_conflict (8): choose between going to a club, eating out with friends, studying, etc.
+*sports_tryout (special): tryouts for the university's sports teams
+*sports_game (special): (depends upon completion of sports_tryout) there's an upcoming game. Are you ready? Are you spectating?
+*study (10): you need to study for an upcoming exam, but your friends have other plans
+*watchit (special): Select either a normal watch or the Physiwell Watchit
+*work_overload (7): too much work, and too little time to do it all

@@ -1,0 +1,30 @@
+Feed the squirrels
+~t 0
+As you return to your dorm, you notice the squirrels have taken an interest to you.
+Four of them gather around you. They seem to be expecting something.
+You search through your bookbag, but only find your one bag of nuts and seeds.
+You were planning on snacking on them after a long day of classes, but the squirrels are pleading to be fed.
+~c
+1 Feed the squirrels|You feed the squirrels.
+3 Run away!|You flee the squirrels. They don't know you have food.
+~t 1
+You open your bag of nuts and pour a couple into your hand.
+You offer it to the squirrels, and they graciously accept the gift.
+As you start to pack them away, however, you notice the squirrels — 7 now? — are pleading for more.
+~a 1 stress -1
+~c
+2 Continue feeding the squirrels|You feed the squirrels more.
+3 Run away!|You flee the squirrels.
+~t 2 
+You pour more nuts and seeds into your hand and offer them to the squirrels.
+Gratefully, the adorable creatures eat out of your hand.
+...
+Before long, you pour the bag but only a single nut comes out.
+A cute baby squirrel reaches out and takes it from your hand.
+You return to your dorm a little hungry, but with a light feeling.
+~a 2 stress -1
+~a 2 strength -1
+~t 3
+As you race to your dorm, the squirrels follow for a few meters before deciding to let you escape.
+Before entering the building, you turn around and catch a glimpse of the squirrels glaring back, before you close the door.
+Your snacks are saved.

@@ -1,0 +1,51 @@
+Argument - Flat Earth
+~t 0
+"The 'Round Earth' was a scheme invented by the Chinese to make discourage the U.S. from trying to get to the other side."
+You sigh, and stare at your pal, Dave. He looks back, but his eyes are deadly serious.
+"Look outside. The ground is flat," Dave says.
+~c
+1 Tell him the Earth is too large, relative to people on the surface.|You tell him why the Earth appears to be flat.
+2 Tell him that the government terraformed parts of a round Earth to be flat.|You enlighten him on why the Earth appears flat.
+7 Concede|You admit that the Earth is flat.
+~t 1
+Dave considers your argument, but shakes his head.
+"We are a flat plane in the universe. The sun goes around us, creating the sunrise and sunset," he says.
+~a 1 school +1
+~c
+3 Tell him of Earth's rotation and of different timezones.|You tell him why the Earth appears to be flat.
+7 Concede|You admit that the Earth is flat.
+~t 2
+Dave considers your argument, but has more to say.
+"We are a flat plane in the universe. The Sun goes around us, creating the sunrise and sunset," he says.
+~a 2 stress -1
+~c
+4 Tell him the sun was an ancient manmade creation that stays in place in the sky, and the Earth rotates.|You enlighten him on how the Earth interacts with the Sun.
+7 Concede|You admit that the Earth is flat.
+~t 3
+Dave considers your argument, but shakes his head.
+"Have you read the old literature? They say the Earth is flat," he says.
+~a 3 school +1
+~c
+5 Tell him they didn't have the tools and knowledge back then.|You tell him why the old literature is wrong, and discuss scientific evidence.
+7 Concede|You admit that the Earth is flat.
+~t 4
+Dave considers your argument, but has more to say.
+"Have you read the old literature? They say the Earth is flat," he says.
+~a 4 stress -1
+~c
+6 Tell him the old literature were faked by the government as a form of propaganda to keep the people ignorant.|You enlighten him on why the old literature is wrong.
+7 Concede|You admit that the Earth is flat.
+~t 5
+Dave isn't very convinced, but you've tried your best.
+He leaves the room grumbling. What can you do?
+~a 5 confidence +1
+~a 5 relations -1
+~t 6
+Dave muses over your claims.
+"I... haven't thought about that," he says.
+You and your friends all laugh along, as you explaining the evidence to Dave.
+You can't help but feel a little dumber after all that.
+~a 6 school -1
+~a 6 relations +1
+~t 7
+Satisfied, Dave nods. Your other friends shoot you a look, but you just shrug.
