@@ -60,6 +60,32 @@ private:
         std::string text;
     };
 
+    class WatchCommand : public Command {
+    public:
+        WatchCommand(std::string & command) {
+            size_t header_end_index = command.find_first_of("\n");
+            size_t choice_start_index = 3; // Right after "~t "
+            std::string choice_str = command.substr(choice_start_index, header_end_index - choice_start_index);
+
+            choice = std::stoi(choice_str);
+            text = command.substr(header_end_index + 1);
+        }
+
+        virtual void run_command(
+            [[maybe_unused]] Player & player,
+            std::unordered_set<int> & choices_made,
+            const Interface & interface
+        ) const override {
+            if (player.has_physiwell() && (choice == 0 || choices_made.find(choice) != choices_made.end())) {
+                interface.print(text);
+            }
+        }
+
+    private:
+        int choice;
+        std::string text;
+    };
+
     class ChoiceCommand : public Command {
     public:
         ChoiceCommand(std::string & command) : choices() {
