@@ -3,8 +3,8 @@ Lunch, study, walk
 You have some unscheduled time today and are debating what to do with it. You're thinking of either taking a walk or
 studying for your classes when you receive a text inviting you to lunch with friends. What do you do?
 ~c
-1 Go for a walk|You take a walk. The squirrels were out in force today.
-2 Study|You study for your classes. The material makes more sense now, and you're less worried about upcoming exams.
+1 Go for a walk|You take a walk.
+2 Study|You study for your classes.
 3 Have lunch with friends|You have lunch with your friends.
 ~t 1
 As you went around campus, you noticed that the squirrels were out in force today. But as much as you noticed them, they

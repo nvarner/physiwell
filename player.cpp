@@ -7,7 +7,7 @@ Player::Player(const std::string name_, const Appearance appearance_,
 
 const std::string &Player::get_name() const { return this->name; }
 
-const WellnessLevels &Player::get_wellness_levels() const {
+WellnessLevels &Player::get_wellness_levels() {
   return this->wellness_levels;
 }
 
