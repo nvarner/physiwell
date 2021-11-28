@@ -1,0 +1,26 @@
+Lunch, study, walk
+~t 0
+You have some unscheduled time today and are debating what to do with it. You're thinking of either taking a walk or
+studying for your classes when you receive a text inviting you to lunch with friends. What do you do?
+~c
+1 Go for a walk|You take a walk. The squirrels were out in force today.
+2 Study|You study for your classes. The material makes more sense now, and you're less worried about upcoming exams.
+3 Have lunch with friends|You have lunch with your friends.
+~t 1
+As you went around campus, you noticed that the squirrels were out in force today. But as much as you noticed them, they
+seemed to largely ignore you. Maybe you'd be more interesting if you bring them food next time....
+~a 1 steps +4000
+~a 1 stress -5
+~a 1 relations -1
+~t 2
+The material makes more sense now, and you're less worried about upcoming exams.
+~a 2 steps +500
+~a 2 stress -1
+~a 2 school +5
+~a 2 relations -1
+~t 3
+You enjoy the meal and catch up with everyone else. They're all interested to hear what you've been doing, too.
+~a 3 steps +200
+~a 3 stress -5
+~a 3 relations +5
+~a 3 confidence +2

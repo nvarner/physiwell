@@ -13,6 +13,16 @@ Sleep after printing each line.
                 The number maps to later text block. If the number is 0, it means the next text block.
                 First text is the choice description.
                 Second text is the choice confirmation, printed if chosen.
+~a [int] [aspect] +|-[int] - If the user ever selected the given number, increase or decrease the specified aspect by
+                                the specified amount.
+
+Wellness Aspects:
+steps: the total number of steps taken
+strength: how able you are to do physical things (higher is more able); behaves as an "accumulation" of steps
+stress: how stressed someone is (higher is more stressed)
+relations: how strong your relationships with others are (higher is stronger relationships)
+school: how well prepared you are for classes (higher is more prepared)
+confidence: how self-confident/strong your self esteem is (higher is more self-confident)
 
 Scenario Compendium:
 watchit (guaranteed): Select either a normal watch or the Physiwell Watchit
