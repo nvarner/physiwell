@@ -4,7 +4,7 @@ As you return to your dorm, you notice the squirrels have taken an interest to y
 Four of them gather around you. They seem to be expecting something.
 You search through your bookbag, but only find your one bag of nuts and seeds.
 You were planning on snacking on them after a long day of classes, but the squirrels are pleading to be fed.
-~c
+~c 0
 1 Feed the squirrels|You feed the squirrels.
 3 Run away!|You flee the squirrels. They don't know you have food.
 ~t 1
@@ -12,7 +12,7 @@ You open your bag of nuts and pour a couple into your hand.
 You offer it to the squirrels, and they graciously accept the gift.
 As you start to pack them away, however, you notice the squirrels — 7 now? — are pleading for more.
 ~a 1 stress -1
-~c
+~c 1
 2 Continue feeding the squirrels|You feed the squirrels more.
 3 Run away!|You flee the squirrels.
 ~t 2 

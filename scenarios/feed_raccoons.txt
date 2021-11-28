@@ -4,7 +4,7 @@ You hear rustling in the tall grass by the entrance to your dormitory.
 You glance over and see a raccoon slink out of its cover.
 It approaches you cautiously, but with expectance.
 In your pocket are two cookies, your late-night snack.
-~c
+~c 0
 1 Give a cookie to the raccoon|You didn't need two cookies anyway.
 3 Flee!|You enter the building and shut the door.
 ~t 1
@@ -12,7 +12,7 @@ The raccoon gleefully accepts your cookie and munches on it.
 You smile and take a picture, but after you put your phone away, you notice that the raccoon has already finished.
 It moves a little closer to you.
 ~a 1 confidence +1
-~c
+~c 1
 2 Give the other cookie to the raccoon|You hand over your last meal.
 3 Flee!|You enter the building and shut the door.
 ~t 2 

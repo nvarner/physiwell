@@ -2,7 +2,7 @@ Lunch, study, walk
 ~t 0
 You have some unscheduled time today and are debating what to do with it. You're thinking of either taking a walk or
 studying for your classes when you receive a text inviting you to lunch with friends. What do you do?
-~c
+~c 0
 1 Go for a walk|You take a walk.
 2 Study|You study for your classes.
 3 Have lunch with friends|You have lunch with your friends.

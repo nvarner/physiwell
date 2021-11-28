@@ -18,7 +18,7 @@ The Physiwell Watchit!
 ...
 The Physiwell Watchit will track your physique and give recommendations for your weekly fitness.
 Will you take the Physiwell Watchit? 
-~c
+~c 0
 1 Replace your watch for the Physiwell Watchit.|You take the Physiwell Watchit.
 2 Keep your current watch. It can tell time just fine.|You reject the Physiwell Watchit.
 ~t 1
