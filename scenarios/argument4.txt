@@ -1,0 +1,51 @@
+Argument - Global Warming
+~t 0
+"You gotta be wary of the data, y'know." 
+You sigh, and stare at your pal, George. He continues with his explanation.
+"This year's our coldest winter yet. No way the Earth is warmin' up."
+~c 0
+1 Tell him that though overall global temperatures are increasing, it doesn't mean temperatures always and only go up.|You tell him why it's not unreasonable the winter was colder.
+2 Tell him that that maybe the government is testing the opposite spectrum for their weather control machine.|You enlighten him on why it's not unreasonable the winter was colder.
+7 Concede|You admit that Global Warming is a hoax.
+~t 1
+George laughs you off.
+"Well, lookat all the talk about green energy. Those investors're afraid they'll lose."
+~a 1 school +1
+~c 1
+3 Tell him about why coal and oil are limited and pollutive energy sources.|You tell him why people care about renewable energy.
+7 Concede|You admit that Global Warming is a hoax.
+~t 2
+George pauses, but throws another point.
+"Well, lookat all the talk about green energy. Those investors're afraid they'll lose."
+~a 2 stress -1
+~c 2
+4 Tell him that renewable energies are tests to harness nature exactly as the government wishes.|You enlighten him on why people care about renewable energy.
+7 Concede|You admit that Global Warming is a hoax.
+~t 3
+George laughs you off.
+"It's a scam, bro. The data's all faked to protect their funding."
+~a 3 school +1
+~c 3
+5 Tell him how there is consensus between almost every climate scientist and study in the world.|You tell him why it's likely the data trend is correct.
+7 Concede|You admit that Global Warming is a hoax.
+~t 4
+George pauses, but throws another point.
+"It's a scam, bro. The data's all faked to protect their funding."
+~a 4 stress -1
+~c 4
+6 Tell him that the weather machine affects the world. If it rain here, it rains everywhere, and the same with temperature.|You enlighten him on why it's likely the data trend is correct.
+7 Concede|You admit that Global Warming is a hoax.
+~t 5
+George isn't very convinced, but you've tried your best.
+He leaves the room grumbling. What can you do?
+~a 5 confidence +1
+~a 5 relations -1
+~t 6
+George ponders over your claims.
+"I... haven't thought about that," he says.
+You and your friends all laugh along, as you explain the evidence to George.
+You can't help but feel a little dumber after all that.
+~a 6 school -1
+~a 6 relations +1
+~t 7
+Satisfied, George nods. Your other friends sigh, but you just shrug.

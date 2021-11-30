@@ -41,7 +41,7 @@ She leaves the room grumbling. What can you do?
 ~a 5 confidence +1
 ~a 5 relations -1
 ~t 6
-Phoebe muses over your claims.
+Phoebe thinks over your claims.
 "I... haven't thought about that," she says.
 You and your friends all laugh along, as you explain the evidence to Phoebe.
 You can't help but feel a little dumber after all that.
