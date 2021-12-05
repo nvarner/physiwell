@@ -19,11 +19,10 @@
 class Scenario {
 public:
     Scenario(std::string path);
-    void play(Player & player, const Interface & interface);
+    void play(Player & player, const Interface & interface) const;
 
 private:
     std::string title;
-    std::ifstream file;
 
     class Command {
     public:

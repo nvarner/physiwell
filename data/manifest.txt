@@ -1,10 +1,10 @@
 Standard:
-argument1 6
-argument2 6
-argument3 6
-argument4 6
-argument5 6
-feed_raccoons 6
-feed_squirrels 10
-lost_keys 3
-lunch_study_walk 5
+6 argument1
+6 argument2
+6 argument3
+6 argument4
+6 argument5
+6 feed_raccoons
+10 feed_squirrels
+3 lost_keys
+5 lunch_study_walk

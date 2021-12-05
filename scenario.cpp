@@ -1,7 +1,13 @@
 #include "scenario.h"
 #include <memory>
 
-Scenario::Scenario(std::string path) : title(""), file(std::ifstream(path)), commands() {
+Scenario::Scenario(std::string path) : title(""), commands() {
+    std::ifstream file(path);
+    if (!file.is_open()) {
+        std::cerr << "Could not open file `" << path << "`!\n";
+        exit(-1);
+    }
+
     std::getline(file, title);
 
     std::string lines;
@@ -42,12 +48,12 @@ Scenario::Scenario(std::string path) : title(""), file(std::ifstream(path)), com
     }
 }
 
-void Scenario::play(Player & player, const Interface & interface) {
+void Scenario::play(Player & player, const Interface & interface) const {
     interface.print(title + "\n\n");
 
     std::unordered_set<int> choices_made;
 
-    for (std::unique_ptr<Command> & command : commands) {
+    for (const std::unique_ptr<Command> & command : commands) {
         command->run_command(player, choices_made, interface);
     }
 }

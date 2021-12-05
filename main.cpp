@@ -15,6 +15,7 @@
 #include "interface.h"
 #include "player.h"
 #include "scenario.h"
+#include "manifest.h"
 
 Gender prompt_pronouns(const Interface &interface) {
   std::string nom = interface.prompt(
@@ -112,7 +113,10 @@ int main(int argc, char **argv) {
   // For debugging
   Player player = create_nathan();
 
-  Scenario scenario("scenarios/lost_keys.txt");
+  Manifest manifest("data/manifest.txt");
+  const Scenario & scenario = manifest.random_scenario();
+
+  // Scenario scenario("scenarios/lost_keys.txt");
 
   scenario.play(player, interface);
 
