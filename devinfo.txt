@@ -34,7 +34,7 @@ school: how well prepared you are for classes (higher is more prepared)
 confidence: how self-confident/strong your self esteem is (higher is more self-confident)
 
 Scenario Compendium: (marked with * if not yet written)
-*argument (6): (5 different scenarios) you've gotten into an argument with your friend.
+argument (6): (5 different scenarios) you've gotten into an argument with your friend.
 *birthday (5): it's a friend's birthday! Will you go celebrate with them?
 *called_out (9): your professor calls you out, but you are not certain of the answer
 *day_off (4): no classes, no work. What will you do?
