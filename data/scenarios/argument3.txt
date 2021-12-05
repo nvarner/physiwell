@@ -1,0 +1,51 @@
+Argument - Anti-vax
+~t 0
+"Haha, I won't vaccinating my kids." 
+You sigh, and stare at your pal, Emily. She continues with her rant.
+"They're literally injecting the disease into you. How is that safe?"
+~c 0
+1 Tell her that the virus is weakened or dead before injection, and poses no threat.|You tell her why the vaccine isn't dangerous.
+2 Tell her that "viruses" are a guise. Vaccines inject growth substances, like how plants use fertilizers.|You enlighten her on why the vaccine isn't dangerous.
+7 Concede|You admit that vaccines are hazardous.
+~t 1
+Emily narrows her eyes at you.
+"My sister Carol felt sick right after she got vaccinated."
+~a 1 school +1
+~c 1
+3 Tell her that it is likely due to the immune system's response, not symptoms of the virus.|You tell her why some people feel sick after a vaccine.
+7 Concede|You admit that vaccines are hazardous.
+~t 2
+Emily thinks it over, but still has doubts.
+"My sister Carol felt sick right after she got vaccinated."
+~a 2 stress -1
+~c 2
+4 Tell her that vaccines only work on humans, so you're not surprised Carol had abnormal effects.|You enlighten her on why some people feel sick after a vaccine.
+7 Concede|You admit that vaccines are hazardous.
+~t 3
+Emily narrows her eyes at you.
+"Why do we have to take the same vaccine again and again? They're still testing it!"
+~a 3 school +1
+~c 3
+5 Tell her that immunities to some viruses "wane" over time, whereas other viruses like the flu are different each year.|You tell her why people need to take the same vaccine.
+7 Concede|You admit that vaccines are hazardous.
+~t 4
+Emily thinks it over, but still has doubts.
+"Why do we have to take the same vaccine again and again? They're still testing it!"
+~a 4 stress -1
+~c 4
+6 Tell her that science is frequently upping the potential of the growth substances, and it's always better to have more of good substances.|You enlighten her on why people need to take the same vaccine.
+7 Concede|You admit that vaccines are hazardous.
+~t 5
+Emily isn't very convinced, but you've tried your best.
+She leaves the room grumbling. What can you do?
+~a 5 confidence +1
+~a 5 relations -1
+~t 6
+Emily contemplates over your claims.
+"I... haven't thought about that," she says.
+You and your friends all laugh along, as you explain the evidence to Emily.
+You can't help but feel a little dumber after all that.
+~a 6 school -1
+~a 6 relations +1
+~t 7
+Satisfied, Emily nods. Your other friends groan, but you just shrug.
