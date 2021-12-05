@@ -57,7 +57,7 @@ public:
   Interface(std::istream &in, std::ostream &out);
 
   void print(const std::string &to_print,
-             const AnsiCode &ansi = AnsiCode::CLEAR, const int64_t delay = 10,
+             const AnsiCode &ansi = AnsiCode::CLEAR, const int64_t delay = 15,
              const int64_t post_delay = 100) const;
 
   std::string input() const;
@@ -92,7 +92,7 @@ private:
   std::istream &in;
   std::ostream &out;
 
-  void print_char(const char to_print, int64_t ms_delay = 10) const;
+  void print_char(const char to_print, int64_t ms_delay = 15) const;
   void print_ansi(const AnsiCode &ansi) const;
 };
 

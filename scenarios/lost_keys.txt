@@ -1,0 +1,43 @@
+Lost keys
+~t 0
+After arriving at your dorm, you reach into your pocket to pull out your keys.
+Then, you reach into another pocket.
+You reach into your jacket.
+You reach into your backpack.
+You reach into your brain and recall maybe dropping them... somewhere. Where was it again?
+Unfortunately, the desk that can replace your key is closed for the next few hours.
+~c 0
+1 Retrace your steps|You turn around and start looking.
+2 Give up and go for a run|You begin to run.
+3 Give up and hang out with friends|You start asking people if they're available.
+~t 1
+You thread your way through campus buildings and end up inside your last class' room. Looks like your keys aren't here,
+though.
+~a 1 steps +1000
+~c 1
+2 Give up and go for a run|You begin to run.
+3 Give up and hang out with friends|You start asking people if they're available.
+4 Keep retracing your steps|You leave the classroom and continue looking.
+~t 4
+You arrive at another classroom, but your keys aren't there, either.
+~a 1 steps +1000
+~c 4
+2 Give up and go for a run|You begin to run.
+3 Give up and hang out with friends|You start asking people if they're available.
+5 Keep retracing your steps|You leave the classroom and continue looking.
+~t 5
+Halfway to your first class of the day, you spot your keys on the ground! You head back to your dorm and unlock the
+door.
+~a 5 steps +750
+~a 5 confidence +3
+~t 2
+You go on a long run through campus. You keep your eyes peeled for your keys, but don't ever see them. When the desk
+opens, you head in and get a replacement.
+~a 2 steps +10000
+~t 3
+You meet up with your friends. After a while, you mention your keys, prompting someone to say they saw keys on the
+ground earlier. You all head over and manage to recover some keys. Everyone wants to confirm that they are the right
+keys, so you head to your dorm and unlock the door. Now in your room, you all pick up the conversation from before
+your search.
+~a 3 relations +5
+~a 3 steps +1000

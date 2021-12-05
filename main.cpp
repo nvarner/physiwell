@@ -79,6 +79,10 @@ Player create_player(const Interface &interface) {
   return Player(name, appearance, major, has_physiwell);
 }
 
+Player create_nathan() {
+  return Player("Nathan", Appearance(Gender::MALE, Hat(HatHeight::Short, "blue")), Major::CS, false);
+}
+
 int main(int argc, char **argv) {
   int option_index = 0, option = 0;
   struct option longOpts[] = {
@@ -104,9 +108,11 @@ int main(int argc, char **argv) {
   std::this_thread::sleep_for(std::chrono::milliseconds(slp));
 
   Interface interface(std::cin, std::cout);
-  Player player = create_player(interface);
+  // Player player = create_player(interface);
+  // For debugging
+  Player player = create_nathan();
 
-  Scenario scenario("scenarios/lunch_study_walk.txt");
+  Scenario scenario("scenarios/lost_keys.txt");
 
   scenario.play(player, interface);
 
