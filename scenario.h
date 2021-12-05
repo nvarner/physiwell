@@ -90,8 +90,13 @@ private:
     public:
         ChoiceCommand(std::string & command) : choices() {
             std::istringstream command_stream(command);
-            std::string _;
-            std::getline(command_stream, _); // Ignore the ~c line
+            std::string header;
+            std::getline(command_stream, header);
+
+            size_t choice_start_index = 3; // Right after "~t "
+            std::string choice_str = header.substr(choice_start_index);
+
+            choice = std::stoi(choice_str);
 
             for (std::string line; std::getline(command_stream, line);) {
                 choices.push_back(create_choice(line));
@@ -103,14 +108,16 @@ private:
             std::unordered_set<int> & choices_made,
             const Interface & interface
         ) const override {
-            std::vector<std::pair<std::string, std::function<std::pair<int, std::string>(const Interface &)>>> options;
-            for (size_t i = 0; i < choices.size(); i++) {
-                const Choice & choice = choices[i];
-                options.push_back(MENU_OPTION(choice.description, std::make_pair(choice.id, choice.confirmation)));
+            if (choice == 0 || choices_made.find(choice) != choices_made.end()) {
+                std::vector<std::pair<std::string, std::function<std::pair<int, std::string>(const Interface &)>>> options;
+                for (size_t i = 0; i < choices.size(); i++) {
+                    const Choice & choice = choices[i];
+                    options.push_back(MENU_OPTION(choice.description, std::make_pair(choice.id, choice.confirmation)));
+                }
+                std::pair<int, std::string> choice = interface.menu("", options);
+                choices_made.insert(choice.first);
+                interface.print(choice.second + '\n');
             }
-            std::pair<int, std::string> choice = interface.menu("", options);
-            choices_made.insert(choice.first);
-            interface.print(choice.second + '\n');
         }
     
     private:
@@ -120,6 +127,7 @@ private:
             std::string confirmation;
         };
 
+        int choice;
         std::vector<Choice> choices;
 
         Choice create_choice(std::string & line) {
