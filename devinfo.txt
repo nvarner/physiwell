@@ -49,7 +49,7 @@ feed_squirrels (10): will you feed the squirrels?
 *group_project2 (5): (requires completion of group_project1) a member of your group is not doing their share of work
 *group_project3 (4): (requires completion of group_project1) a member of your group is not prepared for the upcoming presentation
 *interview (4): prepare for an upcoming interview
-*lost_keys (3): you've lost your housing keys!
+lost_keys (3): you've lost your housing keys!
 *midterm_study (special): Midterms are coming up. How will you prepare?
 *muggers (1): a terrifying encounter with muggers at night
 *nice_day (7): it's a beautiful day outside.
