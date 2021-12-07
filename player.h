@@ -13,9 +13,12 @@ public:
 
   const std::string &get_name() const;
   WellnessLevels &get_wellness_levels();
+  const WellnessLevels &get_wellness_levels() const;
   const Appearance &get_appearance() const;
   const Major &get_major() const;
   bool has_physiwell() const;
+
+  std::string describe(const int total_num_days) const;
 
 private:
   const std::string name;

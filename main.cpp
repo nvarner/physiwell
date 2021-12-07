@@ -1,6 +1,8 @@
 #include <algorithm>
 #include <cassert>
 #include <chrono>
+#include <cstdlib>
+#include <ctime>
 #include <functional>
 #include <getopt.h>
 #include <iostream>
@@ -85,6 +87,8 @@ Player create_nathan() {
 }
 
 int main(int argc, char **argv) {
+  std::srand((unsigned int)std::time(0));
+
   int option_index = 0, option = 0;
   struct option longOpts[] = {
       {"sleep", required_argument, nullptr,
@@ -119,6 +123,7 @@ int main(int argc, char **argv) {
   // Scenario scenario("scenarios/lost_keys.txt");
 
   scenario.play(player, interface);
+  interface.print(player.describe(1));
 
   return 0;
 }

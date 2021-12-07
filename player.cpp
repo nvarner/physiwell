@@ -11,8 +11,16 @@ WellnessLevels &Player::get_wellness_levels() {
   return this->wellness_levels;
 }
 
+const WellnessLevels &Player::get_wellness_levels() const {
+  return this->wellness_levels;
+}
+
 const Appearance &Player::get_appearance() const { return this->appearance; }
 
 const Major &Player::get_major() const { return this->major; }
 
 bool Player::has_physiwell() const { return this->player_has_physiwell; }
+
+std::string Player::describe(const int total_num_days) const {
+  return get_wellness_levels().describe(total_num_days);
+}
