@@ -44,14 +44,11 @@ describe_trait(const int value, const int low, const int high,
 std::string WellnessLevels::describe(const int total_num_days) const {
   std::vector<std::string> descriptions;
 
-  if (steps >= HIGH_STEP_CHANGE) {
-    descriptions.push_back("You feel tired.");
-  } else if (steps >= high_quartile(LOW_STEP_CHANGE, HIGH_STEP_CHANGE)) {
-    descriptions.push_back("You feel energized.");
-  } else if (steps <= LOW_STEP_CHANGE) {
-    descriptions.push_back("You feel limp.");
-  } else if (steps <= low_quartile(LOW_STEP_CHANGE, HIGH_STEP_CHANGE)) {
-    descriptions.push_back("You feel restless.");
+  auto steps_description = describe_trait(
+      steps, LOW_STEP_CHANGE, HIGH_STEP_CHANGE, {"You feel limp."},
+      {"You feel restless."}, {"You feel energized."}, {"You feel tired."});
+  if (steps_description) {
+    descriptions.push_back(*steps_description);
   }
 
   auto stress_description = describe_trait(
@@ -74,7 +71,8 @@ std::string WellnessLevels::describe(const int total_num_days) const {
   auto school_description = describe_trait(
       school, -HIGH_CHANGE * total_num_days, HIGH_CHANGE * total_num_days,
       {"You love your classes."}, {"You feel confident in your classes."},
-      {"You're confused about what you're learning."}, {"You will probably get some failing grades."});
+      {"You're confused about what you're learning."},
+      {"You will probably get some failing grades."});
   if (school_description) {
     descriptions.push_back(*school_description);
   }
