@@ -41,14 +41,17 @@ describe_trait(const int value, const int low, const int high,
   return {};
 }
 
-std::string WellnessLevels::describe(const int total_num_days) const {
+std::string WellnessLevels::describe(const int total_num_days,
+                                     const bool include_steps) const {
   std::vector<std::string> descriptions;
 
-  auto steps_description = describe_trait(
-      steps, LOW_STEP_CHANGE, HIGH_STEP_CHANGE, {"You feel limp."},
-      {"You feel restless."}, {"You feel energized."}, {"You feel tired."});
-  if (steps_description) {
-    descriptions.push_back(*steps_description);
+  if (include_steps) {
+    auto steps_description = describe_trait(
+        steps, LOW_STEP_CHANGE, HIGH_STEP_CHANGE, {"You feel limp."},
+        {"You feel restless."}, {"You feel energized."}, {"You feel tired."});
+    if (steps_description) {
+      descriptions.push_back(*steps_description);
+    }
   }
 
   auto stress_description = describe_trait(

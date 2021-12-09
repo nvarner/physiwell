@@ -14,6 +14,7 @@
 #include <utility>
 #include <vector>
 
+#include "game.h"
 #include "interface.h"
 #include "player.h"
 #include "scenario.h"
@@ -118,12 +119,9 @@ int main(int argc, char **argv) {
   Player player = create_nathan();
 
   Manifest manifest("data/manifest.txt");
-  const Scenario & scenario = manifest.random_scenario();
 
-  // Scenario scenario("scenarios/lost_keys.txt");
-
-  scenario.play(player, interface);
-  interface.print(player.describe(1));
+  Game game(player, manifest, interface, 3);
+  game.play();
 
   return 0;
 }
