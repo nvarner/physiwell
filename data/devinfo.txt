@@ -15,7 +15,7 @@ Sleep after printing each line.
 
 ~w [int] - watchit text: same as ~t, but only print if the player has the Physiwell Watchit.
 
-~c - choices: Number, text, text. Text are separated by the | character.
+~c [int] - choices: Number, text, text. Text are separated by the | character.
                 Only print choices for which the requirements are met. Number choices printed from 1 to n.
                 The number maps to later text block.
                 First text is the choice description.
@@ -24,6 +24,8 @@ Sleep after printing each line.
 
 ~a [int] [aspect] +|-[int] - If the user ever selected the given number, increase or decrease the specified aspect by
                                 the specified amount.
+~q [int] - quit: End the scenario. Do not read past this point.
+                The int argument, like with ~t and ~c, states whether to skip or act on ~q.
 
 Wellness Aspects:
 steps: the total number of steps taken
@@ -37,7 +39,7 @@ Scenario Compendium: (marked with * if not yet written)
 argument (6): (5 different scenarios) you've gotten into an argument with your friend.
 *birthday (5): it's a friend's birthday! Will you go celebrate with them?
 *called_out (9): your professor calls you out, but you are not certain of the answer
-*day_off (4): no classes, no work. What will you do?
+day_off (4): no classes, no work. What will you do?
 *drugs (1): your friend offers you illicit drugs
 feed_raccoons (6): will you feed the raccoons?
 feed_squirrels (10): will you feed the squirrels?

@@ -33,7 +33,7 @@ George pauses, but throws another point.
 "It's a scam, bro. The data's all faked to protect their funding."
 ~a 4 stress -1
 ~c 4
-6 Tell him that the weather machine affects the world. If it rain here, it rains everywhere, and the same with temperature.|You enlighten him on why it's likely the data trend is correct.
+6 Tell him that the weather machine affects the world. If it rains here, it rains everywhere, and the same with temperature.|You enlighten him on why it's likely the data trend is correct.
 7 Concede|You admit that Global Warming is a hoax.
 ~t 5
 George isn't very convinced, but you've tried your best.

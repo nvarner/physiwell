@@ -1,0 +1,158 @@
+Day off
+~t 0
+You wake up. Get dressed. Brush your teeth. Eat breakfast.
+Prepare for another grueling school day.
+What work awaits? What new things will you learn?
+What happens today?
+Before you head out, you check your email in case there's somethng you're forgetting.
+Surprise! No classes today!
+You cheer, and check what work needs to be done for tomorrow.
+None. None at all.
+~c 0
+99 The bed awaits.|You head back into hibernation.
+0 Get up.|You decide to do something.
+~t 99
+You go back to sleep to get the daily recommended 8 hours.
+Why stop at 8, your friend says, as they show you how to fly. Come, let's go explore the world.
+By the time you wake up, it's past noon.
+~a 99 stress -4
+~a 99 strength +1
+~t 0
+You decide to do something. But... what?
+~w 0
+Your Physiwell Watchit says you have made # steps so far. It recommends that you take 10,000 steps a week.
+~c 0
+1 Hang out with your friends.|You call your friends and ask to meet up.
+2 Go for a walk in the campus park.|You decide to walk through the park.
+3 Hit the gym.|You decide to go your local gym to work out.
+4 Start next week's assignments.|It's never too late to start due dates.
+5 Study.|You go back through your notes.
+6 Take a break.|You decide to relax.
+~t 1
+You meet up with Dave and Emily at your dormitory's lounge.
+You have a wonderful time playing table tennis with them while discussing right-wing politics.
+~a steps +300
+~a 1 relations +3
+~t 2
+It's a beautiful day outside. The sun is bright, and there is a slight breeze against your face.
+Several students are feeding birds, and the squirrels seem to be competing as well.
+You round the lake — calm, clear, reflecting the trees opposite it — twice, three times.
+~a 2 steps +1000
+~a 2 stress -1
+~t 3
+While you were doing your 43rd push-up, another student expresses awe toward your endurance.
+You have a nice conversation about your exercise routines.
+His is a little unbalanced, consisting of too much upper-body workout, so you suggest he perform more lunges or use the Ellipticals.
+~a 3 steps +500
+~a 3 strength +3
+~a 3 confidence +1
+~t 4
+You check next week, and to your dismay, a myriad of assignments have filled your online calendar.
+You do your future self a favor, and start them now.
+With deadlines still far away, you afford yourself time to take breaks or listen to music in the background.
+Before long, you check your calendar, and it is nowhere near as daunting as it was.
+~a 4 steps +10
+~a 4 school +2
+~a 4 stress -2
+~t 5
+You bring out your textbooks and past assignments.
+Knowledge is never finished, and neither are you.
+~a 5 steps +5
+~a 5 school +4
+~a 5 confidence +1
+~t 6
+You need this, a break from the workload.
+You read some books, play some video games, and draw a picture.
+You binge-watch a TV series, practive the piano, and shoot some basketball hoops.
+You eat some snacks, watch the squirrels, and do some window shopping.
+It's good to be free.
+~a 6 steps +5
+~a 6 stress -5
+~t 99
+You check your watch, and find that the day has passed.
+Time flies when you sleep well. It's time to go back to sleep.
+~q 99
+~t 0
+By the time you finish, the day is only half over.
+The day is so long when you don't have classes to rush to.
+What else could you do?
+~w 0
+Your Physiwell Watchit says you have made # steps so far. It recommends that you take 10,000 steps a week.
+~c 1
+8 Go for a walk in the campus park.|You decide to walk through the park.
+9 Hit the gym.|You decide to go your local gym to work out.
+10 Start next week's assignments.|It's never too late to start due dates.
+11 Study.|You go back through your notes.
+12 Take a break.|You decide to relax.
+~c 2
+7 Hang out with your friends.|You call your friends and ask to meet up.
+9 Hit the gym.|You decide to go your local gym to work out.
+10 Start next week's assignments.|It's never too late to start due dates.
+11 Study.|You go back through your notes.
+12 Take a break.|You decide to relax.
+~c 3
+7 Hang out with your friends.|You call your friends and ask to meet up.
+8 Go for a walk in the campus park.|You decide to walk through the park.
+10 Start next week's assignments.|It's never too late to start due dates.
+11 Study.|You go back through your notes.
+12 Take a break.|You decide to relax.
+~c 4
+7 Hang out with your friends.|You call your friends and ask to meet up.
+8 Go for a walk in the campus park.|You decide to walk through the park.
+9 Hit the gym.|You decide to go your local gym to work out.
+11 Study.|You go back through your notes.
+12 Take a break.|You decide to relax.
+~c 5
+7 Hang out with your friends.|You call your friends and ask to meet up.
+8 Go for a walk in the campus park.|You decide to walk through the park.
+9 Hit the gym.|You decide to go your local gym to work out.
+10 Start next week's assignments.|It's never too late to start due dates.
+12 Take a break.|You decide to relax.
+~c 6
+7 Hang out with your friends.|You call your friends and ask to meet up.
+8 Go for a walk in the campus park.|You decide to walk through the park.
+9 Hit the gym.|You decide to go your local gym to work out.
+10 Start next week's assignments.|It's never too late to start due dates.
+11 Study.|You go back through your notes.
+~t 7
+You meet up with Dave and Emily at your dormitory's lounge.
+You have a wonderful time playing table tennis with them while discussing right-wing politics.
+~a steps +300
+~a 7 relations +3
+~t 8
+It's a beautiful day outside. The sun is bright, and there is a slight breeze against your face.
+Several students are feeding birds, and the squirrels seem to be competing as well.
+You round the lake — calm, clear, reflecting the trees opposite it — twice, three times.
+~a 8 steps +1000
+~a 8 stress -1
+~t 9
+While you were doing your 43rd push-up, another student expresses awe toward your endurance.
+You have a nice conversation about your exercise routines.
+His is a little unbalanced, consisting of too much upper-body workout, so you suggest he perform more lunges or use the Ellipticals.
+~a 9 steps +500
+~a 9 strength +3
+~a 9 confidence +1
+~t 10
+You check next week, and to your dismay, a myriad of assignments have filled your online calendar.
+You do your future self a favor, and start them now.
+With deadlines still far away, you afford yourself time to take breaks or listen to music in the background.
+Before long, you check your calendar, and it is nowhere near as daunting as it was.
+~a 10 steps +10
+~a 10 school +2
+~a 10 stress -2
+~t 11
+You bring out your textbooks and past assignments.
+Knowledge is never finished, and neither are you.
+~a 11 steps +5
+~a 11 school +4
+~a 11 confidence +1
+~t 12
+You need this, a break from the workload.
+You read some books, play some video games, and draw a picture.
+You binge-watch a TV series, practive the piano, and shoot some basketball hoops.
+You eat some snacks, watch the squirrels, and do some window shopping.
+It's good to be free.
+~a 12 steps +5
+~a 12 stress -5
+~t 0
+But alas, no day lasts forever. You shower, brush your teeth, and prepare for classes tomorrow.
