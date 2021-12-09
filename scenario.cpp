@@ -1,5 +1,13 @@
 #include "scenario.h"
 #include <memory>
+#include <string>
+
+void find_replace(const std::string &find, const std::string &replace_with, std::string &in) {
+    for (size_t i = 0; (i = in.find(find)) != std::string::npos; i += find.size()) {
+        in.replace(i, find.size(), replace_with);
+        i += find.size();
+    }
+}
 
 Scenario::Scenario(std::string path) : title(""), commands() {
     std::ifstream file(path);

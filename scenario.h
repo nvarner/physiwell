@@ -16,6 +16,8 @@
 #include "interface.h"
 #include "player.h"
 
+void find_replace(const std::string &find, const std::string &replace_with, std::string &in);
+
 class Scenario {
 public:
     Scenario(std::string path);
@@ -50,7 +52,10 @@ private:
             const Interface & interface
         ) const override {
             if (choice == 0 || choices_made.find(choice) != choices_made.end()) {
-                interface.print(text);
+                std::string customized_text = text;
+                find_replace("{major}", player.get_major().get_name(), customized_text);
+                find_replace("{name}", player.get_name(), customized_text);
+                interface.print(customized_text);
             }
         }
 

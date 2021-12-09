@@ -8,3 +8,4 @@ Standard:
 10 feed_squirrels
 3 lost_keys
 5 lunch_study_walk
+10 study
