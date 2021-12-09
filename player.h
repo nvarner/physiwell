@@ -18,7 +18,7 @@ public:
   const Major &get_major() const;
   bool has_physiwell() const;
 
-  std::string describe(const int total_num_days, const bool include_steps) const;
+  std::string describe() const;
   std::string read_watch() const;
 
 private:

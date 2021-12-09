@@ -20,9 +20,8 @@ const Major &Player::get_major() const { return this->major; }
 
 bool Player::has_physiwell() const { return this->player_has_physiwell; }
 
-std::string Player::describe(const int total_num_days,
-                             const bool include_steps) const {
-  return get_wellness_levels().describe(total_num_days, include_steps);
+std::string Player::describe() const {
+  return get_wellness_levels().describe();
 }
 
 std::string Player::read_watch() const {

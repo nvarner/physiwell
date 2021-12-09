@@ -10,6 +10,7 @@ void Game::play_day() {
 
   const Scenario &scenario = manifest.random_scenario();
   scenario.play(player, interface);
+  player.get_wellness_levels().steps += WellnessLevels::DAILY_BASELINE_STEPS;
 
   interface.print("\n");
   interface.print("Your watch says: " + player.read_watch() + "\n");
@@ -26,7 +27,7 @@ void Game::play_week() {
   }
 
   interface.print("End of the week\n");
-  interface.print(player.describe(num_days(), false));
+  interface.print(player.describe());
   interface.print("--------------\n\n");
   interface.prompt("Press enter to continue...");
 }
@@ -35,7 +36,7 @@ void Game::play() {
   for (unsigned int i = 0; i < num_weeks; i++) {
     play_week();
   }
-  interface.print(player.describe(num_days(), false));
+  interface.print(player.describe());
 }
 
 unsigned int Game::num_days() const { return DAYS_PER_WEEK * num_weeks; }
