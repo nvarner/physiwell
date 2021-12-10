@@ -1,0 +1,35 @@
+Study
+~t 0
+You prepare for a long study session. An upcoming exam for a required {major} class has you a little worried, but
+you're confident some solid practice and review will make it easy.
+*Bzzt!* Just before putting it away, your phone alerts you to a new message.
+"We're going out tonight. You coming? Should be great."
+~c 0
+1 Reply "Sorry, can't make it. I have some studying to do"|You say you can't go.
+2 Reply "Sorry, can't make it. I have some studying to do", then turn off your phone|You say you can't go and turn your phone off.
+3 Reply "Yeah I'll run over in a second"|You agree to go and head out.
+~t 1
+"Come on. I'll be great! You can always study later, Phoebe always crams right before and she's doing fine."
+~c 1
+4 Reply "Nope, really have to get this done tonight"|You turn down the offer again.
+2 Reply "Nope, really have to get this done tonight", then turn off your phone|You turn down the offer again and shut your phone down.
+3 Reply "Fair enough, see you in a minute"|You agree to go and head out.
+~t 4
+"Really? You have to make the most of your time in college {name}..."
+~c 4
+2 Reply "That's why I have to study tonight"|You start studying
+2 Don't reply|You start studying
+3 Reply "Good point, I'll go"|You agree to go and head out.
+~t 2
+It sounds like it might be fun, but you have too much work to get done tonight. After a good session, you're confident
+in your ability to pass the exam. You do wonder what it would've been like if you'd gone....
+~a 2 relations -3
+~a 2 school +8
+~a 2 confidence +2
+~t 3
+It sounds too good not to be there. You know you'll enjoy the night, but worry about finding time to study later....
+~a 2 relations +3
+~a 2 school -3
+~a 2 confidence -1
+~a 2 stress +5
+~a 2 steps +5000

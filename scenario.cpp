@@ -1,5 +1,13 @@
 #include "scenario.h"
 #include <memory>
+#include <string>
+
+void find_replace(const std::string &find, const std::string &replace_with, std::string &in) {
+    for (size_t i = 0; (i = in.find(find)) != std::string::npos; i += find.size()) {
+        in.replace(i, find.size(), replace_with);
+        i += find.size();
+    }
+}
 
 Scenario::Scenario(std::string path) : title(""), commands() {
     std::ifstream file(path);
@@ -27,6 +35,9 @@ Scenario::Scenario(std::string path) : title(""), commands() {
                 case 'a':
                     commands.push_back(std::make_unique<AspectCommand>(lines));
                     break;
+                case 'q':
+                    commands.push_back(std::make_unique<QuitCommand>(lines));
+                    break;
             }
             lines = "";
         }
@@ -45,6 +56,9 @@ Scenario::Scenario(std::string path) : title(""), commands() {
         case 'a':
             commands.push_back(std::make_unique<AspectCommand>(lines));
             break;
+        case 'q':
+            commands.push_back(std::make_unique<QuitCommand>(lines));
+            break;
     }
 }
 
@@ -54,6 +68,8 @@ void Scenario::play(Player & player, const Interface & interface) const {
     std::unordered_set<int> choices_made;
 
     for (const std::unique_ptr<Command> & command : commands) {
-        command->run_command(player, choices_made, interface);
+        if (command->run_command(player, choices_made, interface)) {
+            break;
+        }
     }
 }

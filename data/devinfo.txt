@@ -24,6 +24,7 @@ Sleep after printing each line.
 
 ~a [int] [aspect] +|-[int] - If the user ever selected the given number, increase or decrease the specified aspect by
                                 the specified amount.
+
 ~q [int] - quit: End the scenario. Do not read past this point.
                 The int argument, like with ~t and ~c, states whether to skip or act on ~q.
 
@@ -60,6 +61,6 @@ muggers (1): a terrifying encounter with muggers at night
 *schedule_conflict (8): choose between going to a club, eating out with friends, studying, etc.
 *sports_tryout (special): tryouts for the university's sports teams
 *sports_game (special): (depends upon completion of sports_tryout) there's an upcoming game. Are you ready? Are you spectating?
-*study (10): you need to study for an upcoming exam, but your friends have other plans
+study (10): you need to study for an upcoming exam, but your friends have other plans
 *watchit (special): Select either a normal watch or the Physiwell Watchit
 *work_overload (7): too much work, and too little time to do it all

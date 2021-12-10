@@ -38,8 +38,10 @@ describe_trait(const int value, const int low, const int high,
 std::string WellnessLevels::describe() const {
   std::vector<std::string> descriptions;
 
+  // Debug
   std::cout << "steps: " << steps << ", stress: " << stress
-            << ", strength: " << strength << "\n";
+            << ", strength: " << strength << ", relations: " << relations
+            << ", school: " << school << ", confidence: " << confidence << "\n";
 
   auto strength_description =
       describe_trait(stress, LOW_STRENGTH_CHANGE, HIGH_STRENGTH_CHANGE,
