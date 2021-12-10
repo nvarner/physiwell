@@ -24,6 +24,7 @@ Sleep after printing each line.
 
 ~a [int] [aspect] +|-[int] - If the user ever selected the given number, increase or decrease the specified aspect by
                                 the specified amount.
+
 ~q [int] - quit: End the scenario. Do not read past this point.
                 The int argument, like with ~t and ~c, states whether to skip or act on ~q.
 

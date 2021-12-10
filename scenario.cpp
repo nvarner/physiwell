@@ -35,6 +35,9 @@ Scenario::Scenario(std::string path) : title(""), commands() {
                 case 'a':
                     commands.push_back(std::make_unique<AspectCommand>(lines));
                     break;
+                case 'q':
+                    commands.push_back(std::make_unique<QuitCommand>(lines));
+                    break;
             }
             lines = "";
         }
@@ -53,6 +56,9 @@ Scenario::Scenario(std::string path) : title(""), commands() {
         case 'a':
             commands.push_back(std::make_unique<AspectCommand>(lines));
             break;
+        case 'q':
+            commands.push_back(std::make_unique<QuitCommand>(lines));
+            break;
     }
 }
 
@@ -62,6 +68,8 @@ void Scenario::play(Player & player, const Interface & interface) const {
     std::unordered_set<int> choices_made;
 
     for (const std::unique_ptr<Command> & command : commands) {
-        command->run_command(player, choices_made, interface);
+        if (command->run_command(player, choices_made, interface)) {
+            break;
+        }
     }
 }
