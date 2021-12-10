@@ -1,0 +1,91 @@
+Mugger Encounter
+~t 0
+You stumble through the dead of night.
+As you walk back to your residence, you make a mental note to never stay so late again.
+Silent, dark, and empty, the streets are void of life.
+It has never been so quiet. Calming, peaceful, the world is asleep.
+No crowding students, no honking cars, no traffic, no rush.
+~w 0
+Your Physiwell Watchit says you have made # steps so far. It recommends that you take 10,000 steps a week.
+~c 0
+1 Go for a walk|You'll never have this experience again. Might as well savor it.
+99 Head back to your dorm|You never know what dangers stalk the night. 
+~q 99
+~t 1
+As you wander the campus, you are impressed by how different it is at night.
+"Great night, kid."
+You agree.
+"Don't turn around."
+You instinctively turn around, and face a man in a hoodie, his hands in his pockets.
+"Hand over your bag," he says.
+~a 1 steps +800
+~a 1 stress +10
+~w 1
+Your Physiwell Watchit notices your heart rate has increased, and suggests relaxing the exercise a bit.
+~c 1
+2 Wait|...
+3 Run|You book it.
+4 Fight|You catch the man by surprise with a strike.
+5 Tell him to hand over his bag|You give him the No U
+13 Hand over your bag|He takes your bag.
+~t 2
+You stand, paralyzed.
+The man waits a few minutes, but then speaks up again.
+"Just hand over the bag, and you won't be hurt," he says.
+~c 1
+20 Wait|...
+3 Run|You book it.
+4 Fight|You catch the man by surprise.
+5 Tell him to hand over his bag|You give him the No U
+13 Hand over your bag|He takes your bag.
+~t 20
+You do not move. Or cannot move. You are unsure.
+The man shuffles a bit.
+"Don't make me take it from you," he says.
+~c 20
+21 Wait|...
+3 Run|You book it.
+4 Fight|You catch the man by surprise.
+5 Tell him to hand over his bag|You give him the No U
+13 Hand over your bag|He takes your bag.
+~t 21
+You perform a few calming routines.
+While you do so, the man turns around and walks briskly away.
+You feel lucky, this time. Most people wouldn't have been so fortunate.
+~t 5
+"I don't have time for games," he growls.
+It was worth a try.
+~a 5 confidence +2
+~a 5 relations +1
+~a 5 school -1
+~a 5 stress +1
+~c 5
+3 Run|You book it.
+4 Fight|You catch the man by surprise.
+13 Hand over your bag|He takes your bag.
+~t 3
+You run back to your dorm at full sprint.
+The man chases after you.
+Luckily, you had a head start, and you're near enough to your dormitory that the man gives up and runs away.
+But just in case, you sprint the way.
+~a 3 steps +300
+~a 3 stress +1
+~t 4
+He backs up, surprised.
+You try to put up a combat stance based upon all the movies you've watched.
+He seems to decide it isn't worth it and runs away. 
+You're not sure if you could have beat him if he fought back, but you're glad he didn't.
+~a 4 strength +1
+~a 4 stress +2
+~a 4 confidence +2
+~a 4 school -2
+~t 13
+He nods. "Good kid. Not a word to anyone."
+He walks backward a few steps, then turns and runs away.
+~a 13 confidence -1
+~c 0
+It's over... slowly you regain your senses and calm yourself.
+You rush back to your dormitory and report what happened.
+Hopefully they'll be able to help.
+~a 0 stress +2
+~a 0 confidence -1

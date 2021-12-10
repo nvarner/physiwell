@@ -22,6 +22,6 @@ Will you take the Physiwell Watchit?
 1 Replace your watch for the Physiwell Watchit.|You take the Physiwell Watchit.
 2 Keep your current watch. It can tell time just fine.|You reject the Physiwell Watchit.
 ~t 1
-[Can't think of what to write here, rn]
+You adjust your new watch to your wrist. It looks good.
 ~t 2
-[Can't think of what to write here, rn]
+There are other ways to track fitness, after all, without having a machine collect every bit of data it can from you.

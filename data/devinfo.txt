@@ -53,7 +53,7 @@ feed_squirrels (10): will you feed the squirrels?
 *interview (4): prepare for an upcoming interview
 lost_keys (3): you've lost your housing keys!
 *midterm_study (special): Midterms are coming up. How will you prepare?
-*muggers (1): a terrifying encounter with muggers at night
+muggers (1): a terrifying encounter with muggers at night
 *nice_day (7): it's a beautiful day outside.
 *night_party (6): you've been invited to a party past midnight by your friends
 *pop_quiz (6): you have to take a sudden quiz that you were not prepared for

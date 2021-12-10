@@ -1,12 +1,32 @@
 Feed the raccoons
 ~t 0
-You hear rustling in the tall grass by the entrance to your dormitory.
+You hear rustling in the tall grass while you walk around the block.
 You glance over and see a raccoon slink out of its cover.
 It approaches you cautiously, but with expectance.
 In your pocket are two cookies, your late-night snack.
+~w 0
+Your Physiwell Watchit says you have made # steps so far. It recommends that you take 10,000 steps a week.
 ~c 0
 1 Give a cookie to the raccoon|You didn't need two cookies anyway.
-3 Flee!|You enter the building and shut the door.
+3 Ignore the raccoon|You continue on your walk.
+5 Flee!|You head to your dorm building, enter, and shut the door.
+~t 3
+As you continue walking, pondering over your profesor's last lecture, you feel someone is following you.
+You turn around... and see a raccoon.
+~a 3 steps +150
+~w 3
+Your Physiwell Watchit says you have made # steps so far. It recommends that you take 10,000 steps a week.
+~c 3
+1 Give a cookie to the raccoon|You didn't need two cookies anyway.
+4 Ignore the raccoon|You continue on your walk.
+5 Flee!|You head to your dorm building, enter, and shut the door.
+~t 4
+You walk a little more briskly, looking back every few seconds.
+The raccoon seems to be stalking you.
+~a 4 steps +150
+~c 4
+1 Give a cookie to the raccoon|You didn't need two cookies anyway.
+5 Flee!|You head to your dorm building, enter, and shut the door.
 ~t 1
 The raccoon gleefully accepts your cookie and munches on it.
 You smile and take a picture, but after you put your phone away, you notice that the raccoon has already finished.
@@ -14,10 +34,10 @@ It moves a little closer to you.
 ~a 1 confidence +1
 ~c 1
 2 Give the other cookie to the raccoon|You hand over your last meal.
-3 Flee!|You enter the building and shut the door.
-~t 2 
-The raccoon accepts your cookie, but this time, does not consume it immediately.
-Instead, it salutes you and returns back to the grasses.
+5 Flee!|You head to your dorm building, enter, and shut the door.
+~t 2
+The raccoon accepts your cookie, but this time, does not eat it immediately.
+Instead, it nods, salutes you, and returns back into hiding within the grasses.
 What a story you'll have for your friends.
 ~a 2 strength -1
 ~a 2 relations +1
