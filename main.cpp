@@ -84,7 +84,7 @@ Player create_player(const Interface &interface) {
 }
 
 Player create_nathan() {
-  return Player("Nathan", Appearance(Gender::MALE, Hat(HatHeight::Short, "blue")), Major::CS, false);
+  return Player("Nathan", Appearance(Gender::MALE, Hat(HatHeight::Short, "blue")), Major::CS, true);
 }
 
 int main(int argc, char **argv) {

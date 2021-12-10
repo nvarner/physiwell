@@ -26,8 +26,14 @@ std::string Player::describe() const {
 
 std::string Player::read_watch() const {
   if (has_physiwell()) {
-    return "The time is 9:00pm. You have taken " +
-           std::to_string(get_wellness_levels().steps) + " steps today.";
+    int steps = get_wellness_levels().steps;
+    if (steps < 10000) {
+      return "The time is 9:00pm. You have taken " + std::to_string(steps) + " steps today. Is that all? You can do better than that!";
+    } else if (steps > 20000) {
+      return "The time is 9:00pm. You have taken " + std::to_string(steps) + " steps today. Wow! You were great today!";
+    } else {
+      return "The time is 9:00pm. You have taken " + std::to_string(steps) + " steps today. Not bad. Push yourself to do more tomorrow!";
+    }
   } else {
     return "The time is 9:00pm.";
   }
