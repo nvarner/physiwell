@@ -28,8 +28,8 @@ in your ability to pass the exam. You do wonder what it would've been like if yo
 ~a 2 confidence +2
 ~t 3
 It sounds too good not to be there. You know you'll enjoy the night, but worry about finding time to study later....
-~a 2 relations +3
-~a 2 school -3
-~a 2 confidence -1
-~a 2 stress +5
-~a 2 steps +5000
+~a 3 relations +3
+~a 3 school -3
+~a 3 confidence -1
+~a 3 stress +5
+~a 3 steps +5000
