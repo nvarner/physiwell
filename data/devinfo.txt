@@ -38,7 +38,7 @@ confidence: how self-confident/strong your self esteem is (higher is more self-c
 
 Scenario Compendium: (marked with * if not yet written)
 argument (6): (5 different scenarios) you've gotten into an argument with your friend.
-*birthday (5): it's a friend's birthday! Will you go celebrate with them?
+birthday (5): it's a friend's birthday! Will you go celebrate with them?
 *called_out (9): your professor calls you out, but you are not certain of the answer
 day_off (4): no classes, no work. What will you do?
 *drugs (1): your friend offers you illicit drugs
@@ -59,7 +59,7 @@ muggers (1): a terrifying encounter with muggers at night
 *night_party (6): you've been invited to a party past midnight by your friends
 *pop_quiz (6): you have to take a sudden quiz that you were not prepared for
 *schedule_conflict (8): choose between going to a club, eating out with friends, studying, etc.
-*sports_tryout (special): tryouts for the university's sports teams
+sports_tryout (special): tryouts for the university's sports teams
 *sports_game (special): (depends upon completion of sports_tryout) there's an upcoming game. Are you ready? Are you spectating?
 study (10): you need to study for an upcoming exam, but your friends have other plans
 *watchit (special): Select either a normal watch or the Physiwell Watchit

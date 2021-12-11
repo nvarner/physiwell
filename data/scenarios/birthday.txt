@@ -1,0 +1,101 @@
+Birthday
+~t 0
+*Bzzt!*
+You pause before entering your dormitory and check your phone,
+"hey {name}! know what day it is! :))", from Phoebe. 
+~c 0
+1 Reply "Not really"|You have no idea what is special today.
+2 Reply "Monday already?"|You sure hope not.
+2 Reply "Oh right, I've got to do some exercises today. Thanks!"|Phoebe is so thoughtful to your physical wellness.
+2 Reply "Study Day :("|The grind never ends.
+2 Reply "Is it the bird cult ritual thing?"|Phoebe's last one was scary.
+2 Reply "This day in history, Edward VIII was the first English monarch to willingly abdicate the throne."|You know what day it is.
+2 Reply "We've been trying to reach you about your car's extended warranty"|
+3 Reply "It's your birthday! Happy Birthday!"|You wish her a happy birthday. 
+~t 1
+"it's my Birthday!! ^^", Phoebe responds.
+~t 2
+"wat. no, it's my Birthday!! ^^", Phoebe responds.
+~t 3
+"thank you <3", Phoebe responds.
+~a 3 relations +1
+~t 0
+You're pretty sure her birthday passed already, quite recently in fact, based on your text history with her.
+But you assume she knows her birthday better than you do.
+~t 1
+"Happy Birthday!" you respond.
+"thanks!!", she replies.
+~t 2
+"Happy Birthday!" you respond.
+"thanks!!", she replies.
+~t 0
+"me and the gang are at the game room. come join us !!", Phoebe texts.
+~w 0
+[relevant w text]
+~c 0
+4 Reply "All right, see you soon!"|You decide to head to the party.
+5 Reply "Oh. I thought it was work out day..."|You haven't yet met your fitness quota.
+6 Reply "Sorry, studying. I've got an exam tomorrow"|The grind never stops.
+7 Reply "I was thinking, maybe we could walk around?"|You suggest a more fit alternative.
+8 Don't Reply|You ignore her.
+~t 5
+"come on, take a break! you can skip a day!" Phoebe texts.
+~w 5
+Your physiwell watchit reminds you [relevant text]
+~c 5
+4 Reply "All right, see you soon!"|You decide to head to the party.
+9 Reply "Sorry, but I can't miss a day. I'll come by in about an hour"|You decide you can't make any exceptions to your habits.
+7 Reply "Maybe we could walk around instead?"|You suggest a more fit alternative.
+8 Don't Reply|You ignore her.
+~t 7
+"ehhh ok, in an hour" Phoebe says.
+You meet with them at the campus park for a nice walk.
+It's a beautiful day, and even your friend's seem to have enjoyed the walk.
+"We're going to Drew's after to play some cards, you coming?" Phoebe suddenly asks.
+~a 7 relations +2
+~a 7 steps +500
+~a 7 stress -1
+~c 7
+4 Reply "Sure, let's do that"|You decide to head to the party.
+10 Reply "Sorry, but I gotta study for an exam tomorrow"|You decide you can't hang out too long.
+~t 9
+You rush to the gym and perform your workout a little quicker than you normally would.
+You manage to complete your reps in record time, but you do the full duration on the treadmill.
+A little fatigued, you rush to the game room, but find they've already left.
+You text them, and wait a bit, but they don't respond.
+An hour and a half later, you find out they were watching a movie at a theater, and are now going for dinner.
+Unfortunately, you just ate, and are feeling tired.
+~a 9 relations -3
+~a 9 strength +2
+~a 9 steps +800
+~t 6
+"lame, take a break! you can't study forever!! come have some fun!!" Phoebe texts.
+~c 6
+4 Reply "All right, see you soon!"|You decide to head to the party.
+10 Reply "I'm so sorry, but the exam is tomorrow. I gotta study"|You tell her you really need to 
+8 Don't Reply|You ignore her.
+~t 10
+Phoebe is disappointed, but she wishes you good luck.
+You go back to your dorm and cram the textbook.
+~a 10 relations -3
+~a 10 school +3
+~q 10
+~t 4
+It's an important day — a birthday — for your friend, after all.
+You could use a break anyway, and what better way than to celebrate your friend's birthday?
+You make a mental note to do your stuff later. For now, it's party time!
+...
+You hang out with your friends til an hour past midnight.
+~a 4 stress -3
+~a 7 stress +2
+~a 4 relations +4
+~a 7 relations -3
+~a 4 school -4
+~a 4 strength -1
+~t 8
+Your friends aren't happy that you ignored them, but you got a lot of your things done.
+~a 8 relations -6
+~a 8 confidence +1
+~a 8 school +1
+~a 8 steps +300
+~a 8 strength +1
