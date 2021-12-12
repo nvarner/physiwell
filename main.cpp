@@ -66,13 +66,40 @@ Major create_major(const Interface &interface) {
 }
 
 bool ask_has_physiwell(const Interface &interface) {
-  interface.print(
-      "Congratulations! You have been selected as the winner of one PhysiWell "
-      "fitness tracker watch, or another product of lesser value!\n");
-  return MENU(interface, bool, "What would you like to choose?",
-    MENU_OPTION("PhysiWell fitness tracker (allows you to see fitness data and current time)", true),
-    MENU_OPTION("Cheap analog watch (allows you to see the current time)", false)
+  interface.print("\"I check on your height,");
+  interface.print("Your weight, and fitness.\n");
+  interface.print("I’ll keep your secrets;\n");
+  interface.print("Why, I'd never tell!\n");
+  interface.print("I know what is best\n");
+  interface.print("And advise you right,\n");
+  interface.print("With big insights from\n");
+  interface.print("Your own personnel.\n");
+  interface.print("I urge you to bed,\n");
+  interface.print("and wish you good night,\n");
+  interface.print("When tomorrow comes,\n");
+  interface.print("I’ll say you slept well.\n");
+  interface.print("Who am I?\"\n");
+  interface.print("...\n");
+  interface.print("The Physiwell Watchit!\n");
+  interface.print("...\n");
+  interface.print("The Physiwell Watchit will track your physique and give recommendations for your fitness.\n");
+  interface.print("Will you take the Physiwell Watchit?\n");
+  bool choose_watch = MENU(interface, bool, "What would you like to choose?",
+    MENU_OPTION("Replace your watch for the Physiwell Watchit.", true),
+    MENU_OPTION("Keep your current watch. It can tell time just fine.", false)
   );
+
+  if (choose_watch) {
+    interface.print("You take the Physiwell Watchit.\n");
+    interface.print("\n");
+    interface.print("You adjust your new watch to your write. It looks good.\n\n");
+  } else {
+    interface.print("You reject the Physiwell Watchit.\n");
+    interface.print("\n");
+    interface.print("There are other ways to track fitness, after all, without having a machine collect every bit of data it can from you.\n\n");
+  }
+
+  return choose_watch;
 }
 
 Player create_player(const Interface &interface) {
@@ -114,9 +141,9 @@ int main(int argc, char **argv) {
   std::this_thread::sleep_for(std::chrono::milliseconds(slp));
 
   Interface interface(std::cin, std::cout);
-  // Player player = create_player(interface);
+  Player player = create_player(interface);
   // For debugging
-  Player player = create_nathan();
+  // Player player = create_nathan();
 
   Manifest manifest("data/manifest.txt");
 
