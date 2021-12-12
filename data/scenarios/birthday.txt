@@ -30,8 +30,6 @@ But you assume she knows her birthday better than you do.
 "thanks!!", she replies.
 ~t 0
 "me and the gang are at the game room. come join us !!", Phoebe texts.
-~w 0
-[relevant w text]
 ~c 0
 4 Reply "All right, see you soon!"|You decide to head to the party.
 5 Reply "Oh. I thought it was work out day..."|You haven't yet met your fitness quota.
@@ -41,7 +39,7 @@ But you assume she knows her birthday better than you do.
 ~t 5
 "come on, take a break! you can skip a day!" Phoebe texts.
 ~w 5
-Your physiwell watchit reminds you [relevant text]
+Your physiwell watchit reminds you that "winners never quit!"
 ~c 5
 4 Reply "All right, see you soon!"|You decide to head to the party.
 9 Reply "Sorry, but I can't miss a day. I'll come by in about an hour"|You decide you can't make any exceptions to your habits.

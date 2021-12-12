@@ -10,3 +10,7 @@ Standard:
 5 lunch_study_walk
 10 study
 8 schedule_conflict
+1 muggers
+5 birthday
+4 day_off
+1 sports_tryouts

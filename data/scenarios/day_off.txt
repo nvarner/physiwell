@@ -19,9 +19,7 @@ By the time you wake up, it's past noon.
 ~a 99 strength +1
 ~t 0
 You decide to do something. But... what?
-~w 0
-Your Physiwell Watchit says you have made # steps so far. It recommends that you take 10,000 steps a week.
-~c 0
+c 0
 1 Hang out with your friends.|You call your friends and ask to meet up.
 2 Go for a walk in the campus park.|You decide to walk through the park.
 3 Hit the gym.|You decide to go your local gym to work out.
@@ -149,7 +147,7 @@ Knowledge is never finished, and neither are you.
 ~t 12
 You need this, a break from the workload.
 You read some books, play some video games, and draw a picture.
-You binge-watch a TV series, practive the piano, and shoot some basketball hoops.
+You binge-watch a TV series, practice the piano, and shoot some basketball hoops.
 You eat some snacks, watch the squirrels, and do some window shopping.
 It's good to be free.
 ~a 12 steps +5

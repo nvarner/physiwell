@@ -141,9 +141,9 @@ int main(int argc, char **argv) {
   std::this_thread::sleep_for(std::chrono::milliseconds(slp));
 
   Interface interface(std::cin, std::cout);
-  Player player = create_player(interface);
+  // Player player = create_player(interface);
   // For debugging
-  // Player player = create_nathan();
+  Player player = create_nathan();
 
   Manifest manifest("data/manifest.txt");
 
