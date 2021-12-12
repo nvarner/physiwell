@@ -57,6 +57,7 @@ private:
         std::string customized_text = text;
         find_replace("{major}", player.get_major().get_name(), customized_text);
         find_replace("{name}", player.get_name(), customized_text);
+        find_replace("{hat}", player.get_appearance().get_hat().get_description(), customized_text);
         interface.print(customized_text);
       }
       return false;
