@@ -45,22 +45,15 @@ day_off (4): no classes, no work. What will you do?
 feed_raccoons (6): will you feed the raccoons?
 feed_squirrels (10): will you feed the squirrels?
 *fight (2): you witness a couple of students are getting into a fight
-*final_study (special): Finals are coming up. How will you prepare?
-*funny_hat_convention (1): (only happens once) title
+*funny_hat_convention (1): title
 *gym (7): a friend invites you to go the gym
-*group_project1 (4): a class assigns a group project
-*group_project2 (5): (requires completion of group_project1) a member of your group is not doing their share of work
-*group_project3 (4): (requires completion of group_project1) a member of your group is not prepared for the upcoming presentation
 *interview (4): prepare for an upcoming interview
 lost_keys (3): you've lost your housing keys!
-*midterm_study (special): Midterms are coming up. How will you prepare?
 muggers (1): a terrifying encounter with muggers at night
 *nice_day (7): it's a beautiful day outside.
 *night_party (6): you've been invited to a party past midnight by your friends
 *pop_quiz (6): you have to take a sudden quiz that you were not prepared for
 *schedule_conflict (8): choose between going to a club, eating out with friends, studying, etc.
-sports_tryout (special): tryouts for the university's sports teams
-sports_game (special): (depends upon completion of sports_tryout) there's an upcoming game. Are you ready? Are you spectating?
 study (10): you need to study for an upcoming exam, but your friends have other plans
-*watchit (special): Select either a normal watch or the Physiwell Watchit
+watchit (special): Select either a normal watch or the Physiwell Watchit
 *work_overload (7): too much work, and too little time to do it all
