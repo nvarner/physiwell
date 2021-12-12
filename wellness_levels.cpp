@@ -67,14 +67,14 @@ std::string WellnessLevels::describe() const {
       {"You like having friends."}, {"You feel alone."},
       {"You feel isolated."});
   if (stress_description) {
-    descriptions.push_back(*stress_description);
+    descriptions.push_back(*relations_description);
   }
 
   auto school_description = describe_trait(
-      school, -HIGH_CHANGE, HIGH_CHANGE, {"You love your classes."},
-      {"You feel confident in your classes."},
+      school, -HIGH_CHANGE, HIGH_CHANGE,
+      {"You will probably get some failing grades."},
       {"You're confused about what you're learning."},
-      {"You will probably get some failing grades."});
+      {"You feel confident in your classes."}, {"You love your classes."});
   if (school_description) {
     descriptions.push_back(*school_description);
   }

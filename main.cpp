@@ -120,7 +120,7 @@ int main(int argc, char **argv) {
 
   Manifest manifest("data/manifest.txt");
 
-  Game game(player, manifest, interface, 3);
+  Game game(player, manifest, interface, 5);
   game.play();
 
   return 0;

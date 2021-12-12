@@ -43,7 +43,7 @@ public:
    */
   int strength;
 
-  static const int HIGH_CHANGE = 10;
+  static const int HIGH_CHANGE = 5;
 
   /**
    * How stressed someone is.

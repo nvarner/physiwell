@@ -4,8 +4,6 @@ As you walk throughout the park, you notice the squirrels have taken an interest
 Four of them gather around you. They seem to be expecting something.
 You search through your bookbag, but only find your one bag of nuts and seeds.
 You were planning on snacking on them after a long day of classes, but the squirrels are pleading to be fed.
-~w 0
-Your Physiwell Watchit says you have made # steps so far. It recommends that you take 10,000 steps a week.
 ~c 0
 1 Feed the squirrels|You feed the squirrels.
 3 Ignore the squirrels|You continue on your walk.
@@ -14,8 +12,6 @@ Your Physiwell Watchit says you have made # steps so far. It recommends that you
 As you enjoy the nature around you, you notice a great amount of movement in the corners of your eye.
 The squirrels... they seem to be following you.
 ~a 3 steps +100
-~w 3
-Your Physiwell Watchit says you have made # steps so far. It recommends that you take 10,000 steps a week.
 ~c 3
 1 Feed the squirrels|You feed the squirrels.
 4 Ignore the squirrels|You continue on your walk.
