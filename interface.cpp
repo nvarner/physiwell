@@ -110,5 +110,3 @@ std::string Interface::prompt(const std::string &prompt) const {
   this->print("\n", AnsiCode::CLEAR);
   return result;
 }
-
-

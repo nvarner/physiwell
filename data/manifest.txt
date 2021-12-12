@@ -9,3 +9,4 @@ Standard:
 3 lost_keys
 5 lunch_study_walk
 10 study
+8 schedule_conflict

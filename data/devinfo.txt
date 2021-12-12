@@ -53,7 +53,7 @@ muggers (1): a terrifying encounter with muggers at night
 *nice_day (7): it's a beautiful day outside.
 *night_party (6): you've been invited to a party past midnight by your friends
 *pop_quiz (6): you have to take a sudden quiz that you were not prepared for
-*schedule_conflict (8): choose between going to a club, eating out with friends, studying, etc.
+schedule_conflict (8): choose between going to a club, eating out with friends, studying, etc.
 study (10): you need to study for an upcoming exam, but your friends have other plans
 watchit (special): Select either a normal watch or the Physiwell Watchit
 *work_overload (7): too much work, and too little time to do it all

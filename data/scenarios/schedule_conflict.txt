@@ -1,0 +1,62 @@
+Schedule Conflict
+~t 0
+Your phone has been going off nonstop for the last few minutes.
+
+"Mass meeting in an hour! Free food + fun!"
+
+"I was thinking of trying the pizza place down the street tonight"
+"Yeah looked interesting to me too"
+"Oh I had been meaning to go there, anyone else interested?"
+
+"Good luck on our exam tomorrow! Don't forget to get some good sleep tonight. -Prof."
+
+So many options, so little time. What do you do?
+~c 0
+1 Go to the club meeting|You set off for the meeting.
+2 Go out for dinner with your friends|You set off for some pizza.
+3 Study a little for your exam, then go to bed early|You pull out your notebook and do some final review
+4 Go for a run to destress|You set off on a run.
+~t 1
+The club sounds like the best option, so you head to their meeting. You learn about all the awesome things you can do as
+a member, and decide to join. You also meet some other people with similar interests. They might become good friends.
+However, as the meeting winds down, you notice that it's getting a little late.
+~c 1
+5 Head back and get some sleep|You say goodbye and walk back
+6 Keep talking with them|You continue conversing with vigor
+~a 1 relations +1
+~t 2
+The pizza is great! You and your friends are sure to return. It is getting late though.
+~c 2
+5 Head back and get some sleep|You say goodbye and walk back
+7 Do more with your friends|You suggest an air hockey competition in the game room.
+~t 3
+You spend some extra time reviewing, then get to sleep early.
+~a 3 stress -1
+~a 3 relations -1
+~a 3 school +5
+~t 4
+You go for a long run around campus. You loop back near your down and consider getting some sleep.
+~c 4
+5 Head in and get some sleep|You head into the dorm
+8 You keep running laps
+~a 4 steps +2000
+~a 4 relations -1
+~t 5
+You get to bed early. You'll surely be well rested in the morning for your exam.
+~a 5 school +3
+~t 6
+It turns out that you all do have a lot in common! You begin to whittle the night away talking about your shared
+passions....
+~a 6 school -2
+~a 6 relations +5
+~t 7
+You set up an air hockey table and start the tournament (which you're in great shape to win, of course). The games are
+low scoring, though; you could be here all night.
+~a 7 school -2
+~a 7 relations +4
+~a 7 stress -1
+~t 8
+You continue running into the night.
+~a 8 school -3
+~a 8 stress -1
+~a 8 steps +6000
