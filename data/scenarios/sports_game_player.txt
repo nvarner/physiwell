@@ -1,0 +1,61 @@
+Sports game (player)
+~t 0
+Today is the day of the big game, against your rival, Stalin's State University.
+You feel nervous, but your captain pats you on the back.
+"We've been practicing all year for this. We'll get 'em," they say.
+In the locker room, your team seems even more anxious than you are.
+"I heard Stalin State's been undefeated this season!" Sam says.
+"The Executioners? That's a terrifying name," Charlie says.
+"Have you seen them? They look like they're going to smash our bones," Taylor says.
+~c 0
+1 Say Nothing|...
+2 You're starting to feel sick...|You feel nauseous
+3 "I heard the players naturally produce their own anabolic steroid reserves to use in games!"|You try to lighten the mood.
+4 Give an arousing speech|You encourage your team.
+~t 2
+As you wait and dread the upcoming game, your head begins to spin.
+Your stomach aches, and you hunch over.
+"Hey, {name}, are you all right?" your Captain says.
+You nod, and reach out a hand, but they look so far away...
+...
+You wake on a cot, surrounded by paramedics.
+"Ok, this one's awake," one says.
+You ask for what happened.
+"You passed out before the game," they say.
+Oh no, the game!
+"Don't worry, it's over," they say.
+You search for your team.
+They are happy to see that you are all right, but it seems they've lost.
+Though they are clearly saddened, they share funny and relatable stories with you
+~a 2 relations +3
+~a 2 confidence -3
+~a 2 stress +3
+~a 2 strength +1
+~q 2
+~t 3
+A couple of players chuckle nervously.
+"What? How's that allowed?" Charlie says.
+You explain that it was just a joke, and your team breathes out sighs of relief.
+"Oh, ha ha, I knew that," Charlie says.
+~a 3 relations +1
+~a 3 stress +1
+~a 
+
+~t 4
+
+~t 0
+The coach appears, and tells you all the game is about to begin.
+...
+Your team is smashed by the Stalin's State Executioners.
+...
+Disappointed, your team returns to the locker room.
+~ c 0
+5 Say nothing|...
+6 
+
+~t 0
+"We'll get 'em next time, right team?" your captain says.
+Your team cheers, and decide to go out together for dinner.
+~a 0 relations +1
+~a 0 stress -1
+~a 0 strength +1

@@ -12,7 +12,7 @@ Your Physiwell Watchit says you have made # steps so far. It recommends that you
 3 Join the "Movable Objects" (American Football)|Sounds like a very physically active team.
 4 Join the "Floor Spikes" (Volleyball)|You sign up as a Floor Spike.
 5 Join the "Peregrine Falcons" (Track)|World's fastest animal, right? When diving?
-6 Join the "Fight Club" (Hockey)|They hand you a stick, and tell you to make good use of it.
+6 Join the "Fight Clubbers" (Hockey)|They hand you a stick, and tell you to make good use of it.
 99 Don't join a team|You join the Spectators.
 ~t 99
 You decide to stay out of the sports scene for now.
