@@ -1,9 +1,9 @@
 Standard:
-6 argument1
-6 argument2
-6 argument3
-6 argument4
-6 argument5
+1 argument1
+1 argument2
+1 argument3
+1 argument4
+1 argument5
 6 feed_raccoons
 10 feed_squirrels
 3 lost_keys
