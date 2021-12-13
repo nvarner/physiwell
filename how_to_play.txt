@@ -1,0 +1,19 @@
+Welcome to Physiwell!
+
+Physiwell is a text-based choice narrative game.
+
+[To do: any information concerning compilation and running the game]
+
+You are an undergraduate student, returning for a new semester at Great Minds University.
+After you arrive, check-in to your dorm, and figure out all the administrative details,
+you find out that you have been randomly selected by the University to test out the Physiwell Watchit.
+The Physiwell Watchit is the latest fitness-tracking watch from Physiwell Inc.
+It will track data on your physique and give recommendations for your fitness.
+This is an optional choice; you may decline the Physiwell Watchit.
+With a new semester ahead, you feel excited to see what awaits you this semester.
+
+To play, you will be prompted throughout the game to make decisions for your avatar.
+The selections you can choose from are preceded by a number.
+To make a choice, simply type the number of your desired choice and then hit the enter key.
+
+Enjoy the stories!
