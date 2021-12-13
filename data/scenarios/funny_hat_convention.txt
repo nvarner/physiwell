@@ -1,0 +1,33 @@
+Funny Hat Convention (unfinished)
+~t 0
+Ladies and Gentlemen!
+Welcome to the 14th random Funny Hat Convention!
+Or was it 15th? Who knows!
+This is the one time when we can wear our hats with pride and without fear of prejudice or humiliation!
+I'm your host, the Mad Hatter!
+Come one, come all, to see what wacky hats we have in store!
+Be sure to enter your hats into the Funny Hat Raffle!
+One lucky hat will win a mysterious prize! Only the winner will find out!
+On your head, is a(n) {hat}.
+~c 0
+1 Leave|You leave the Funny Hat Convention.
+2 Check out the hats|You meet with some of the exhibits.
+3 Show off your hat|You pose dramatically.
+4 Enter the Raffle|You enter your {hat} into the raffle.
+
+~t 2
+What fascinating hats, you find!
+
+A
+~c 2
+1 Leave|You leave the Funny Hat Convention.
+4 Enter the Raffle|You enter your {hat} into the raffle.
+
+~t 3
+[text]
+~c 3
+1 Leave|You leave the Funny Hat Convention.
+4 Enter the Raffle|You enter your {hat} into the raffle.
+
+~t 4
+

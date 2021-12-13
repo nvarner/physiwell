@@ -1,0 +1,73 @@
+Pop quiz
+~t 0
+You notice your professor seems extra pleased coming into class today.
+Normally, he's a terrible one that hates students.
+"Put all your technology away, and take out a pen our pencil. We're having a pop quiz." he announces.
+The collective moans of horror and dismay made your professor's two days worth it.
+Your heart misses beat, but luckily...
+~c 0
+1 You paid attention in class|...
+2 You studied the material|...
+3 You contemplated lecuture material while you worked out|... 
+4 You're way ahead in your other assessments and other classes|...
+5 You haven't used the $20 in your pocket, yet|...
+6 Your friend is sitting right by you|...
+7 The "class brain" is sitting right by you|...
+8 You're done for|...
+~t 0
+The professor passes out the quizzes.
+Surprise, surprise, nothing he covered in lectures.
+You notice he seems especially curious on what the students are answering.
+~t 1
+Using your knowledge from lectures, you realize it is hopeless against such a cruel and unusual punishment.
+~a 1 school -3
+~a 1 confidence -1
+~a 1 stress +1
+~t 2
+Using your knowledge from the textbook, you realize it is hopeless against such a cruel and unusual punishment.
+~a 2 school -1
+~a 2 confidence -3
+~a 2 stress +1
+~t 3
+You don't know where to begin with these sentences you have never seen before, strung in a way to maximise the professor's utility.
+Hopefully you didn't forget them while you were working out.
+~a 3 school -3
+~a 3 confidence -3
+~a 3 strength +2
+~a 3 steps +1000
+~a 3 stress +1
+~t 4
+You can afford to take this hit. It is, after all, just an unfair assault from the professor on the students.
+~a 4 school -1
+~a 4 confidence -1
+~a 4 stress +4
+~t 5
+You make sure to leave a couple of fresh dollar bills on the corner of your desk.
+"Good luck on this quiz," the professor says, taking it.
+The other students watch you with envy and anger.
+You'd feel like a winner, but you still don't know anything.
+Did you really win?
+~a 5 school -2
+~a 5 relations -2
+~t 6
+"Good luck," your friend whispers.
+"Good luck," you whisper back.
+With renewed motivation, you tap into your thinking skills and try your best.
+~a 6 school -2
+~a 6 relations +1
+~a 6 confidence -1
+~a 6 stress +2
+~t 7
+"Good luck," you whisper to the class brain.
+"I must express my regret to inform you, that to 'wish one good luck' has no scientific basis to demonstrate a supernatural change to the destiny predetermined by present factors. Nevertheless, I sincerely hope that you are prepared for this assessment, so that you may perform well," the brain says.
+You nod, for you have prepared very well. The answers are sitting right next to you.
+During the test, the professor takes your paper.
+"You've violated the honor code," he says.
+~a 7 school -3
+~a 7 confidence +1
+~a 7 stress +4
+~t 8
+You admit your defeat.
+~a 8 school -1
+~a 8 confidence -2
+~a 8 stress +2
