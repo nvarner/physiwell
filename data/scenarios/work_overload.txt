@@ -12,7 +12,61 @@ And a couple of extra credit assignments.
 All due within a week.
 You try to estimate the number of hours it'll take to complete it all, but the answer seems to increase without bound.
 ~c 0
-1 Tell your friends you might be unable to watch that movie.
-2 Start cramming it all.
-3 Do as much as you can before the movie.
-4 
+1 Tell your friends you might be unable to watch that movie|You text your friends.
+2 Do as much as you can before the movie|You start on your work.
+3 Destress by going for a walk|You decide to take a break first.
+4 Contemplate|So much work.
+5 Give up|It's too much for one human to do.
+~t 3
+You calm yourself, and go for a walk.
+Neither the squirrels nor the trees are in a rush, so neither are you.
+After the walk, the work seems a little more manageable, if you do it slowly.
+~a 3 stress -2
+~a 3 steps +1000
+~c 3
+1 Tell your friends you might be unable to watch that movie|You text your friends.
+2 Do as much as you can before the movie|You start on your work.
+4 Contemplate|So much work.
+5 Give up|It's too much for one human to do.
+~t 4
+You contemplate for an hour, planning out your schedule.
+After an hour, the work remains untouched, and you still feel stressed.
+~a 4 stress +1
+~c 4
+1 Tell your friends you might be unable to watch that movie|You text your friends.
+2 Do as much as you can before the movie|You start on your work.
+40 Contemplate more|So much work.
+5 Give up|It's too much for one human to do.
+~t 1
+Your friends are disappointed, but understanding.
+While they watch the Rainbow Super Rangers defeat Illimain of the Illuminators, you are watching your fingers type at unforeseen speeds.
+But you manage to finish all your work in time, and you believe you did well.
+~a 1 relations -2
+~a 1 school +3
+~a 1 stress +2
+~t 2
+You hurry to finish as much as you can.
+By the time that movie time rolls around, you've barely scratched the surface of the work.
+Your friends enjoy the movie. You try to, but the work boggles your mind.
+Your friends are glad you came, though they can tell you are troubled.
+...
+You were unable to finish all your work in time, so you try to finesse the final few.
+~a 1 relations +1
+~a 1 school +1
+~a 1 stress +4
+~t 40
+You conteplate some more.
+After an hour, the work still remains untouched, and you feel even worse.
+~a 40 stress +1
+~a 40 school -1
+~c 40
+1 Tell your friends you might be unable to watch that movie|You text your friends.
+2 Do as much as you can before the movie|You start on your work.
+5 Give up|It's too much for one human to do.
+~t 5
+You concede, and decide to relax instead.
+You spend the night with your friends, having the time of your life.
+~a 5 stress -4
+~a 5 relations +3
+~a 5 steps +400
+~a 5 school -5
