@@ -45,14 +45,14 @@ day_off (4): no classes, no work. What will you do?
 feed_raccoons (6): will you feed the raccoons?
 feed_squirrels (10): will you feed the squirrels?
 *fight (2): you witness a couple of students are getting into a fight
-*funny_hat_convention (1): title
+funny_hat_convention (1): title
 *gym (7): a friend invites you to go the gym
 *interview (4): prepare for an upcoming interview
 lost_keys (3): you've lost your housing keys!
 muggers (1): a terrifying encounter with muggers at night
 *nice_day (7): it's a beautiful day outside.
 *night_party (6): you've been invited to a party past midnight by your friends
-*pop_quiz (6): you have to take a sudden quiz that you were not prepared for
+pop_quiz (6): you have to take a sudden quiz that you were not prepared for
 schedule_conflict (8): choose between going to a club, eating out with friends, studying, etc.
 study (10): you need to study for an upcoming exam, but your friends have other plans
 watchit (special): Select either a normal watch or the Physiwell Watchit
