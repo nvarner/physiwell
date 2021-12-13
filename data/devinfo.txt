@@ -44,7 +44,7 @@ day_off (4): no classes, no work. What will you do?
 *drugs (1): your friend offers you illicit drugs
 feed_raccoons (6): will you feed the raccoons?
 feed_squirrels (10): will you feed the squirrels?
-*fight (2): you witness a couple of students are getting into a fight
+fight (2): you witness a couple of students are getting into a fight
 funny_hat_convention (1): title
 *gym (7): a friend invites you to go the gym
 *interview (4): prepare for an upcoming interview

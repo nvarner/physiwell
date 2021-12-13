@@ -1,0 +1,145 @@
+Students fighting
+~t 0
+As you jog through the campus, park, you hear a commotion coming up to your right.
+Nearing it, you see four students, two engaged in a heated discussion on politics.
+~c 0
+1 Spectate|You halt and wait around.
+2 Speak to the green-shirted spectators|You stop to ask what's happening.
+3 Speak to the combatants|You stop to ask what's happening.
+10 Join the fight|You roll up your sleeves.
+11 Get help|You decide to look for someone who can help.
+99 Jog by|You ignore them.
+13 Perform a jog-by|You pick up some small stones as you near them.
+~t 13
+As you pass by the students, you toss a handful of the stones.
+The spread throughout the air, and pelt the two students in discussion.
+They each let out a yelp and fall to the floor.
+The spectators turn to you in shock.
+You nod to them and jog away quickly.
+~a 13 confidence +3
+~a 13 relations -1
+~a 13 stress +1
+~a 13 strength +1
+~t 2
+"Politics," one of them says sadly.
+"It's escalating a lot more than normal..." the other says.
+"Wonder if they'll fight," the first says.
+~a 2 relations +1
+~c 2
+20 Spectate|You watch to see what happens.
+3 Speak to the combatants|You stop to ask what's happening.
+10 Join the fight|You roll up your sleeves.
+11 Get help|You decide to look for someone who can help.
+99 Continue jogging|You leave and continue your jog.
+~t 3
+They lower their fists a little, temporarily.
+"This person thinks that the Earth is flat on the back of a tortoise. Can you believe that?" the blue-shirted one on the left says.
+"I don't what to say, but they think that birds work for the government as mercenary spies," says the red-shirted one on the right.
+You chuckle to yourself.
+"Tell'em I'm right!" says the blue-shirt.
+"Tell'em they're wrong!" says the red-shirt.
+"Oh, it'll be you!" says the blue-shirt.
+"If you're wrong, I'm the only one left!" says the red-shirt.
+~c 3
+20 Spectate|You shrug, move away, watch to see what happens.
+31 Say the blue-shirt is wrong|...
+32 Say the red-shirt is wrong|...
+33 Say they're both wrong|...
+34 Try to calm them down|...
+10 Join the fight|You roll up your sleeves.
+11 Get help|You decide to look for someone who can help.
+99 Continue jogging|You leave and continue your jog.
+~t 33
+Before you can begin explaining why, they laugh you off.
+"Come back after you learn how to think" they say.
+~a 33 confidence -1
+~c 33
+20 Spectate|You shrug, move away, watch to see what happens.
+31 Say the blue-shirt is wrong.|...
+32 Say the red-shirt is wrong.|...
+34 Try to calm them down|...
+10 Join the fight|You roll up your sleeves.
+11 Get help|You decide to look for someone who can help.
+99 Continue jogging|You leave and continue your jog.
+~t 31
+"Oh, is that so!" the blue-shirt says, raising their fists.
+They then turn their back and leave in a huff.
+"Thanks, pal," says red-shirt. They give you a high five.
+~a 31 confidence +1
+~a 31 stress +1
+~t 32
+"Oh, is that so!" the red-shirt says, raising their fists.
+They then turn their back and leave in a huff.
+"Thanks, pal," says blue-shirt. They give you a high five.
+~a 32 confidence +1
+~a 32 stress +1
+~t 34
+You encourage them to lower their fists, and restate their opinion clearly.
+It goes well, until the first one states their opinion.
+In less than a minute, they are screaming at each other again.
+~a 34 relations +1
+~c 34
+20 Spectate|You shrug, move away, watch to see what happens.
+10 Join the fight|You roll up your sleeves.
+11 Get help|You decide to look for someone who can help.
+99 Continue jogging|You leave and continue your jog.
+~t 20
+You watch as the argument heats up more and more.
+With a scream of rage, someone throws a punch.
+Before long, they are wrestling on the ground, a mess of blood and torn clothes.
+The spectators call for help, and the fight is broken by campus security.
+~a 20 school -1
+~t 10
+Who will you join for?
+~a 10 confidence +1
+~a 10 strength +1
+~c 10
+16 For the blue-shirt|...
+17 For the red-shirt|...
+18 For the spectators|...
+19 For yourself|...
+~t 16
+You nod to blue-shirt. They throw a punch.
+You flank the side, and throw a kick.
+Red-shirt flails for a few minutes, but is no match for you and blue-shirt.
+~a 16 strength +1
+~a 16 confidence +1
+~a 16 school -2
+~a 16 relations +1
+~t 17
+You nod to red-shirt. They throw a punch.
+You flank the side, and throw a kick.
+Blue-shirt flails for a few minutes, but is no match for you and red-shirt.
+~a 17 strength +1
+~a 17 confidence +1
+~a 17 school -2
+~a 17 relations +1
+~t 18
+"I'm doing this for you," you say to the confused spectators.
+You step up to them and punch red-shirt.
+The blue-shirt looks to you, and punches you back.
+Before long, you are on the ground soaking kicks from them both.
+The spectators call for help, and you are rescued by campus security.
+They ask if you are ok, and you all converse for the rest of the day.
+~a 18 confidence -2
+~a 18 school -2
+~a 18 strength +3
+~a 18 relations +2
+~t 19
+You step up to them and punch blue-shirt.
+The red-shirt looks to you, and punches you back.
+Before long, you are on the ground soaking kicks from them both.
+The spectators call for help, and you are rescued by campus security.
+You almost had them, but it was two against one.
+~a 19 confidence +2
+~a 19 school -2
+~a 19 strength +3
+~a 19 relations -2
+~t 11
+You decide to call campus security.
+The spectators see you're helping, so they pitch in with what they know.
+Before long, campus security arrive and separates the two enraged students.
+You wave goodbye to the spectators. They are impressed by your actions.
+~a 11 confidence +1
+~a 11 school +1
+~a 11 relations +1
