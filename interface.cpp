@@ -48,10 +48,10 @@ std::string AnsiCode::as_ascii() const {
   }
 
   if (this->foreground != Color::Default) {
-    args.push_back(this->foreground + 30);
+    args.push_back(uint8_t(this->foreground + 30));
   }
   if (this->background != Color::Default) {
-    args.push_back(this->background + 40);
+    args.push_back(uint8_t(this->background + 40));
   }
 
   std::string ascii = "\x1b[0";

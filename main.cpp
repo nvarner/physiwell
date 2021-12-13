@@ -66,7 +66,7 @@ Major create_major(const Interface &interface) {
 }
 
 bool ask_has_physiwell(const Interface &interface) {
-  interface.print("\"I check on your height,");
+  interface.print("\"I check on your height,\n");
   interface.print("Your weight, and fitness.\n");
   interface.print("I’ll keep your secrets;\n");
   interface.print("Why, I'd never tell!\n");
@@ -98,7 +98,6 @@ bool ask_has_physiwell(const Interface &interface) {
     interface.print("\n");
     interface.print("There are other ways to track fitness, after all, without having a machine collect every bit of data it can from you.\n\n");
   }
-
   return choose_watch;
 }
 

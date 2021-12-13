@@ -1,0 +1,18 @@
+Too Much Work
+~t 0
+You exit your class, and stop by a bench to text your friends.
+"Yeah, I'm down to watch a movie, just going to do my hw first" Dave says.
+You decide that's a good idea, and check what assignments you still have to do before the next week.
+Let's see...
+Daily short homeworks from three classes.
+Three essays.
+Two project.
+Two exams, one quiz.
+And a couple of extra credit assignments.
+All due within a week.
+You try to estimate the number of hours it'll take to complete it all, but the answer seems to increase without bound.
+~c 0
+1 Tell your friends you might be unable to watch that movie.
+2 Start cramming it all.
+3 Do as much as you can before the movie.
+4 

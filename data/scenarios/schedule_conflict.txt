@@ -38,7 +38,7 @@ You spend some extra time reviewing, then get to sleep early.
 You go for a long run around campus. You loop back near your down and consider getting some sleep.
 ~c 4
 5 Head in and get some sleep|You head into the dorm
-8 You keep running laps
+8 You keep running laps|You keep running laps
 ~a 4 steps +2000
 ~a 4 relations -1
 ~t 5
