@@ -12,7 +12,7 @@ public:
   
   void play();
 
-  static const unsigned int DAYS_PER_WEEK = 1;
+  static const unsigned int DAYS_PER_WEEK = 7;
 
 private:
   Player &player;

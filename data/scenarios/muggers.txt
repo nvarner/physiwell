@@ -81,7 +81,7 @@ You're not sure if you could have beat him if he fought back, but you're glad he
 He nods. "Good kid. Not a word to anyone."
 He walks backward a few steps, then turns and runs away.
 ~a 13 confidence -1
-~c 0
+~t 0
 It's over... slowly you regain your senses and calm yourself.
 You rush back to your dormitory and report what happened.
 Hopefully they'll be able to help.

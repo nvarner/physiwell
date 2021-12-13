@@ -38,17 +38,17 @@ describe_trait(const int value, const int low, const int high,
 std::string WellnessLevels::describe() const {
   std::vector<std::string> descriptions;
 
-  // Debug
-  std::cout << "steps: " << steps << ", stress: " << stress
-            << ", strength: " << strength << ", relations: " << relations
-            << ", school: " << school << ", confidence: " << confidence << "\n";
+  // // Debug
+  // std::cout << "steps: " << steps << ", stress: " << stress
+  //           << ", strength: " << strength << ", relations: " << relations
+  //           << ", school: " << school << ", confidence: " << confidence << "\n";
 
   auto strength_description =
       describe_trait(stress, LOW_STRENGTH_CHANGE, HIGH_STRENGTH_CHANGE,
-                     {"You regularly throw boulders."},
-                     {"You can move things around with ease."},
-                     {"You have trouble moving things around."},
-                     {"You could be crushed by a feather."});
+                     {"You feel physically strong."},
+                     {"You notice that you have more endurance than before."},
+                     {"Walking across campus feels hard."},
+                     {"Walking short distances is hard."});
   if (strength_description) {
     descriptions.push_back(*strength_description);
   }
@@ -91,6 +91,34 @@ std::string WellnessLevels::describe() const {
   std::string description;
   for (std::string desc : descriptions) {
     description += desc + "\n";
+  }
+
+  return description;
+}
+
+std::string WellnessLevels::detailed_describe() const {
+  std::string description;
+
+  if (stress > 5) {
+    description += "You wish you weren't so stressed.\n";
+  }
+
+  if (relations < -5) {
+    description += "You feel isolated. If only you'd spent more time with friends.\n";
+  } else if (relations < 5) {
+    description += "You feel isolated. You have some friends, but don't know them that well.\n";
+  }
+
+  if (school < -5) {
+    description += "You're on the path to failing your classes. Studying would have helped a lot.\n";
+  } else if (school > 5) {
+    description += "Your grades are looking incredible.\n";
+  }
+
+  if (confidence < -5) {
+    description += "Your self-esteem is low. You're not confident in yourself.\n";
+  } else if (confidence > 5) {
+    description += "Your self-esteem is very strong. You're full of confidence.\n";
   }
 
   return description;

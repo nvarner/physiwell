@@ -24,12 +24,12 @@
     }                                                                          \
   }
 
-// const int DEFAULT_TEXT_DELAY = 15;
-// const int DEFAULT_LONG_TEXT_DELAY = 100;
+const int DEFAULT_TEXT_DELAY = 15;
+const int DEFAULT_LONG_TEXT_DELAY = 100;
 
-// Debugging
-const int DEFAULT_TEXT_DELAY = 0;
-const int DEFAULT_LONG_TEXT_DELAY = 0;
+// // Debugging
+// const int DEFAULT_TEXT_DELAY = 0;
+// const int DEFAULT_LONG_TEXT_DELAY = 0;
 
 enum FontWeight { Bold, Normal, Light };
 

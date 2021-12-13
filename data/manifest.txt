@@ -14,3 +14,5 @@ Standard:
 5 birthday
 4 day_off
 1 sports_tryouts
+2 fight
+6 pop_quiz

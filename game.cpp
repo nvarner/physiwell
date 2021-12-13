@@ -36,7 +36,9 @@ void Game::play() {
   for (unsigned int i = 0; i < num_weeks; i++) {
     play_week();
   }
-  interface.print(player.describe());
+
+  interface.print("End of game\n", AnsiCode(FontWeight::Bold, false, false));
+  interface.print(player.get_wellness_levels().detailed_describe());
 }
 
 unsigned int Game::num_days() const { return DAYS_PER_WEEK * num_weeks; }

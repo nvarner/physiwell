@@ -17,10 +17,10 @@ public:
 
   /**
    * Get a qualitative description of wellness.
-   * - `total_num_days`: The total number of days the simulation will run for.
-   * Used to determine what high and low values are.
    */
   std::string describe() const;
+
+  std::string detailed_describe() const;
 
   static const int HIGH_STEP_CHANGE = 20000;
   static const int LOW_STEP_CHANGE = 0;

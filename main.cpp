@@ -92,7 +92,7 @@ bool ask_has_physiwell(const Interface &interface) {
   if (choose_watch) {
     interface.print("You take the Physiwell Watchit.\n");
     interface.print("\n");
-    interface.print("You adjust your new watch to your write. It looks good.\n\n");
+    interface.print("You adjust your new watch to your wrist. It looks good.\n\n");
   } else {
     interface.print("You reject the Physiwell Watchit.\n");
     interface.print("\n");
@@ -141,9 +141,11 @@ int main(int argc, char **argv) {
   std::this_thread::sleep_for(std::chrono::milliseconds(slp));
 
   Interface interface(std::cin, std::cout);
-  // Player player = create_player(interface);
-  // For debugging
-  Player player = create_nathan();
+
+  Player player = create_player(interface);
+
+  // // For debugging
+  // Player player = create_nathan();
 
   Manifest manifest("data/manifest.txt");
 
