@@ -58,11 +58,8 @@ Appearance create_appearance(const Interface &interface) {
 }
 
 Major create_major(const Interface &interface) {
-  return MENU(interface, Major, "What is your major?",
-    MENU_OPTION("Computer Science", Major::CS),
-    MENU_OPTION("Political Science", Major::PoliSci),
-    MENU_OPTION("Undecided", Major::Undecided)
-  );
+  std::string major = interface.prompt("What is your major?");
+  return Major(major);
 }
 
 bool ask_has_physiwell(const Interface &interface) {
