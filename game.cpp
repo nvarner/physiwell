@@ -6,6 +6,7 @@ Game::Game(Player &player_in, Manifest &manifest_in,
       today(Day(Month::SEPTEMBER, 20)), num_weeks(num_weeks_in) {}
 
 void Game::play_day() {
+  interface.print("--------------\n\n");
   interface.print("Today is " + today.get_name() + "\n\n");
 
   const Scenario &scenario = manifest.random_scenario();

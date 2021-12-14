@@ -63,8 +63,6 @@ Scenario::Scenario(std::string path) : title(""), commands() {
 }
 
 void Scenario::play(Player & player, const Interface & interface) const {
-    interface.print(title + "\n\n");
-
     std::unordered_set<int> choices_made;
 
     for (const std::unique_ptr<Command> & command : commands) {
